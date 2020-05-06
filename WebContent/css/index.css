@@ -1,0 +1,32 @@
+#login{
+	width: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 1px 5px 30px rgb(195, 195, 195);
+		
+}
+
+#inicio{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+		
+}
+
+#background{
+	background-color: rgb(243, 243, 243);
+}
+
+#buttonInicio{
+	position: absolute;
+	display: inline-block
+}
+
+.btn-lg {
+    
+    width:150%;
+    font-size: 30px;
+    text-align:center;
+}
