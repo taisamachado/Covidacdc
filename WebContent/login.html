@@ -1,10 +1,10 @@
-<!doctype html>
+	<!doctype html>
 <html lang="pt-br">
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -12,33 +12,69 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="#">Coranavírus</a> -->
+<!--       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> -->
+<!--         <span class="navbar-toggler-icon"></span> -->
+<!--       </button> -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="inicio.html">Início
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sobre.html">Sobre</a>
+          </li>
+<!--           <li class="nav-item"> -->
+<!--             <a class="nav-link" href="#">Serviços</a> -->
+<!--           </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <title>Login</title>
 </head>
-<body id="background">
-
-	<div class="card" id="login">
-		<!--   <img src="..." class="card-img-top" alt="..."> -->
-		<div class="card-body">
-			<form>
-				<div class="form-group">
-					<label >Usuário</label> <input
-						type="email" class="form-control" id="exampleInputEmail1" placeholder="Informe o seu usuário"> 
-				</div>
-				<div class="form-group">
-					<label >Senha</label> <input
-						type="password" class="form-control" id="" placeholder="Insira sua senha">
-				</div>
-				<button type="submit" class="btn btn-outline-primary  btn-block">Entrar</button>
+<body style=" background-color: #E6E6FA;">
+<!-- 	LOGIN -->
+	<div class="container-fluid " >
+	<div class="row">
+	<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<form class="form-container">
+			<h1>Faça seu login</h1>
+				  <div class="form-group">
+    <Strong for="exampleInputEmail1">Email address</Strong>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+    <Strong for="exampleInputPassword1">Senha</Strong>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" required>
+  </div>
+				<button type="submit" class="btn btn-success btn-block" onclick="location.href='./forms.html'">Entrar</button>
 			</form>
 
 		</div>
+	<div class="col-md-4 col-sm-4 col-xs-12"></div></div>
 	</div>
-
+</div>
+<!-- END	LOGIN -->
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
 		crossorigin="anonymous"></script>
 	<script
@@ -48,6 +84,6 @@
 	<script
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script> -->
 </body>
 </html>
