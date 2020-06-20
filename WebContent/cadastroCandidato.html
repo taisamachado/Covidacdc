@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/compiler/bootstrap.css">
 <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 
 <title>Cadastro Candidato a Voluntário</title>
@@ -17,38 +17,35 @@ content="width=device-width, initial-scale=1">
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-	<script src="js/tabela.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="js/tabela.js"></script>
 
 
 </head>
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="logo.jpg" class="img-fluid rounded-circle" width="30" height="30" alt="logo" loading="lazy"></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="InicioLogado.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="index.html">Início</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 <body>
 
@@ -68,105 +65,103 @@ content="width=device-width, initial-scale=1">
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
 
-          <form class="needs-validation" novalidate>
-          <div class="form-row justify-content-md-center">
-           <div class="form-group">
-             <label for="nome">Primeiro nome</label>
-             <input type="text" class="form-control" id="nome" placeholder="Nome"  required>
-             <div class="invalid-feedback">
-               Por favor, informe um nome válido.
-             </div>
-           </div>
-           </div>
+					<form class="needs-validation" novalidate>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="nome">Primeiro nome</label> <input type="text"
+									class="form-control" id="nome" placeholder="Nome" required>
+								<div class="invalid-feedback">Por favor, informe um nome
+									válido.</div>
+							</div>
+						</div>
 
-           <div class="form-row justify-content-md-center">
-           <div class="form-group">
-             <label for="nome">Sobrenome</label>
-             <input type="text" class="form-control" id="nome" placeholder="Sobrenome"  required>
-           <div class="invalid-feedback">
-               Por favor, informe um nome válido.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="nome">Sobrenome</label> <input type="text"
+									class="form-control" id="nome" placeholder="Sobrenome" required>
+								<div class="invalid-feedback">Por favor, informe um nome
+									válido.</div>
+							</div>
+						</div>
 
-           <div class="form-row justify-content-md-center">
-           <div class="form-group">
-           <label for="endereco">Endereço</label>
-           <input type="text" class="form-control" id="endereco" placeholder="Rua das laranjeiras, nº 13" required>
-           <div class="invalid-feedback">
-               Por favor, informe um endereço válido.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="endereco">Endereço</label> <input type="text"
+									class="form-control" id="endereco"
+									placeholder="Endereço" required>
+								<div class="invalid-feedback">Por favor, informe um
+									endereço válido.</div>
+							</div>
+						</div>
 
-            <div class="form-row justify-content-md-center">
-           <div class="form-group">
-           <label for="dataNasc">Data de Nascimento</label>
-           <input type="text" class="form-control" id="dataNasc" placeholder="01/01/1980" onkeypress="$(this).mask('00/00/0000')"required>
-           <div class="invalid-feedback">
-               Por favor, informe uma data de nascimento válida.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="dataNasc">Data de Nascimento</label> <input
+									type="text" class="form-control" id="dataNasc"
+									placeholder="00/00/0000"
+									onkeypress="$(this).mask('00/00/0000')" required>
+								<div class="invalid-feedback">Por favor, informe uma data
+									de nascimento válida.</div>
+							</div>
+						</div>
 
-           <div class="form-row justify-content-md-center">
-           <div class="form-group">
-           <label for="tel">Telefone</label>
-           <input type="text" class="form-control" id="tel" placeholder="99999-9999" onkeypress="$(this).mask('00000-0000')" minlength="10" required>
-           <div class="invalid-feedback">
-               Por favor, informe um telefone válido.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="tel">Telefone</label> <input type="text"
+									class="form-control" id="tel" placeholder="Telefone"
+									onkeypress="$(this).mask('00000-0000')" minlength="10" required>
+								<div class="invalid-feedback">Por favor, informe um
+									telefone válido.</div>
+							</div>
+						</div>
 
-           <div class="form-row justify-content-md-center">
-           <div class="form-group">
-           <label for="cpf">Informe seu CPF</label>
-           <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00"   onkeypress="$(this).mask('000.000.000-00');"  required  >
-           <div class="invalid-feedback">
-               Por favor, informe um CPF válido.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="cpf">CPF</label> <input type="text"
+									class="form-control" id="cpf" placeholder="000.000.000-00"
+									onkeypress="$(this).mask('000.000.000-00');" required>
+								<div class="invalid-feedback">Por favor, informe um CPF
+									válido.</div>
+							</div>
+						</div>
 
-           <div class="form-row justify-content-md-center">
-           <div class="form-group">
-           <label for="nomeAgente">Nome da agente comunitária</label>
-           <input type="text" class="form-control" id="tel" placeholder="Maria da Silva" required>
-           <div class="invalid-feedback">
-               Por favor, informe um telefone válido.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="nomeAgente">Agente comunitária</label> <input
+									type="text" class="form-control" id="tel"
+									placeholder="Agente comunitária" required>
+								<div class="invalid-feedback">Por favor, informe um
+									telefone válido.</div>
+							</div>
+						</div>
 
-           <div class="form-row justify-content-md-center">
-           <div class="form-group">
-           <label for="email">Informe seu e-mail:</label>
-           <input type="email" class="form-control" id="email" placeholder="fulano@xxx.com" required>
-           <div class="invalid-feedback">
-               Por favor, informe um e-mail válido.
-           </div>
-           </div>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<label for="email">e-mail:</label> <input
+									type="email" class="form-control" id="email"
+									placeholder="e-mail" required>
+								<div class="invalid-feedback">Por favor, informe um e-mail
+									válido.</div>
+							</div>
+						</div>
 
-          <div class="form-row justify-content-md-center">
-          <div class="form-group">
-           <div class="form-check">
-             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-             <label class="form-check-label" for="invalidCheck">
-               Concordo com os termos e condições
-             </label>
-             <div class="invalid-feedback">
-               Você deve concordar, antes de continuar.
-             </div>
-           </div>
-          </div>
-          </div>
-           <div class="form-row justify-content-md-center">
-              <button class="btn btn-outline-primary" type="submit" href="#">Enviar</button>
-           </div>
+						<div class="form-row justify-content-md-center">
+							<div class="form-group col-xl-auto">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value=""
+										id="invalidCheck" required> <label
+										class="form-check-label" for="invalidCheck"> Concordo
+										com os termos e condições </label>
+									<div class="invalid-feedback">Você deve concordar, antes
+										de continuar.</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row justify-content-md-center">
+							<button class="btn btn-outline-primary" type="submit" href="#">Enviar</button>
+						</div>
 
-          </form>
+					</form>
 
 
 				</div>
@@ -174,19 +169,18 @@ content="width=device-width, initial-scale=1">
 			</div>
 
 			<style>
+				body {
+						padding-top: 70px;
+					 }
 
-				body { padding-top: 70px; }
-
-				navbar-expand{-sm|-md|-lg|-xl}
-
+				navbar-expand {-sm |-md|-lg|-xl}
+				
 			</style>
 
 			<script>
-function tabelaFamilia()
-{
-     location.href = "gridPresidenteFamilia.html";
-}
-</script>
+				
+			
+			</script>
 
 		</div>
 	</div>

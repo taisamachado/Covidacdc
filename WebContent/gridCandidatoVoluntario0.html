@@ -19,9 +19,8 @@ content="width=device-width, initial-scale=1">
     <script src="node_modules/popper.js/dist/popper.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-
   <link rel="stylesheet" type="text/css" href="style/style.css">
-	<script src="js/tabela.js"></script>
+  <script src="js/tabela.js"></script>
 
 
 </head>
@@ -54,52 +53,55 @@ content="width=device-width, initial-scale=1">
 				<div class="row">
 					<div class="col-sm-8">
 						<h2>
-							<b>Famílias</b>
+							Relação <b>Candidatos a Voluntário</b>
 						</h2>
 					</div>
-					<div class="col-sm-4">
-						<button type="button" class="btn btn-info add-new" onclick="novaFamilia()">
-							<i class="fa fa-plus"></i> Adicionar
-						</button>
-					</div>
+					
 				</div>
 			</div>
-
-			<!-- <form class="form-inline my-2 my-lg-0" id="pesquisaPorPresidente">
-      	<input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Pesquisa">
-      	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisa</button>
-    	</form> -->
-
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Presidente</th>
-						<th>Rua</th>
-						<th style="width:70px;">N.º</th>
-						<th>Nome representante Família</th>
-						<th>Telefone de Contato</th>
-						<th>Total de habitantes</th>
+						<th>Nome</th>
+						<th>Endereço</th>
+						<th>Telefone</th>
+						<th>Status</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
-					<!-- incluir a seguir informações do banco de dados -->
 					<tr>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
+						<td>John Doe</td>
+						<td>Rua 1, 171</td>
+						<td>99999-0000</td>
+						<td>Pendente</td>
 						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
+							<a class="add" title="Add" data-toggle="tooltip" ><i
 								class="material-icons">&#xE03B;</i></a>
 
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+							<a class="edit" title="Edit" data-toggle="tooltip"
+								href="formCandidatoVoluntario.html"><i class="material-icons">&#xE254;</i></a>
 
 							<a class="delete" title="Delete" data-toggle="tooltip"><i
-								class="material-icons">&#xE872;</i></a></td>
+								class="material-icons">&#xE872;</i></a>
+						</td>
+					</tr>
+
+					<tr>
+						<td>Joanne</td>
+						<td>Rua 4, 90</td>
+						<td>99999-0001</td>
+						<td>Rejeitado</td>
+						<td>
+							<a class="add" title="Add" data-toggle="tooltip" ><i
+								class="material-icons">&#xE03B;</i></a>
+
+							<a class="edit" title="Edit" data-toggle="tooltip"
+								href="formCandidatoVoluntario.html"><i class="material-icons">&#xE254;</i></a>
+
+							<a class="delete" title="Delete" data-toggle="tooltip"><i
+								class="material-icons">&#xE872;</i></a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -115,11 +117,13 @@ content="width=device-width, initial-scale=1">
 	</style>
 
 	<script>
-		function novaFamilia()
+		function novoCandidato()
 		{
-     	location.href = "cadastroFamiliaNovo.html";
+     	location.href = "cadastroCandidato.html";
 		}
 </script>
 
+
 </body>
+
 </html>

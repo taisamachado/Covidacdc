@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tabela relação presidente/morador</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
@@ -12,37 +11,36 @@ content="width=device-width, initial-scale=1">
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-  <script src="js/tabela.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="js/tabela.js"></script>
 
 
 </head>
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="logo.jpg" class="img-fluid rounded-circle" width="30" height="30" alt="logo" loading="lazy"></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="InicioLogado.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 <body>
 
@@ -56,11 +54,7 @@ content="width=device-width, initial-scale=1">
 							Relação <b>Candidatos a Voluntário</b>
 						</h2>
 					</div>
-					<div class="col-sm-4">
-						<button type="button" class="btn btn-info add-new" onclick="novoCandidato()">
-							<i class="fa fa-plus"></i> Adicionar Candidato
-						</button>
-					</div>
+
 				</div>
 			</div>
 			<table class="table table-bordered">
@@ -75,57 +69,41 @@ content="width=device-width, initial-scale=1">
 				</thead>
 				<tbody>
 					<tr>
-						<td>John Doe</td>
-						<td>Rua 1, 171</td>
-						<td>99999-0000</td>
-						<td>Pendente</td>
+						<!-- trazer as informações a seguir do banco de dados: -->
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
 						<td>
-							<a class="add" title="Add" data-toggle="tooltip" ><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" data-toggle="tooltip"
-								href="formCandidatoVoluntario.html"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+							<a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							data-toggle="tooltip" href="formCandidatoVoluntario.html"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a>
 						</td>
 					</tr>
 
-					<tr>
-						<td>Joanne</td>
-						<td>Rua 4, 90</td>
-						<td>99999-0001</td>
-						<td>Rejeitado</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip" ><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" data-toggle="tooltip"
-								href="formCandidatoVoluntario.html"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
-								class="material-icons">&#xE872;</i></a>
-						</td>
-					</tr>
 				</tbody>
 			</table>
 		</div>
 	</div>
 
 	<style>
+body {
+	padding-top: 70px;
+}
 
-		body { padding-top: 70px; }
-
-		navbar-expand{-sm|-md|-lg|-xl}
-
-	</style>
+navbar-expand {-sm |-md|-lg|-xl
+	
+}
+</style>
 
 	<script>
-		function novoCandidato()
-		{
-     	location.href = "cadastroCandidato.html";
+		function novoCandidato() {
+			location.href = "cadastroCandidato.html";
 		}
-</script>
+	</script>
 
 
 </body>

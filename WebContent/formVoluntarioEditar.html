@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1">
-<title>Candidato a Voluntário</title>
+<title>Voluntário</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 <link rel="stylesheet"
@@ -39,9 +39,10 @@
 				 <img src="logo.jpg" class="img-fluid rounded-circle" width="30" height="30" alt="logo" loading="lazy"></a>
 		 </li>
 		 <li class="nav-item active">
-			 <a class="nav-link" href="./InicioLogado.html">Início</a>
+			 <a class="nav-link" href="InicioLogado.html">Início</a>
 		 </li>
-		 <li class="nav-item"><a class="nav-link" href="./index.html">Logout</a></li>
+		 <li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+		 </li>
 	 </ul>
  </div>
 </div>
@@ -57,7 +58,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 						<h2>
-							Cadastro <b>Candidatos a Voluntário</b>
+							Cadastro <b>Voluntário</b>
 						</h2>
 					</div>
 				</div>
@@ -68,84 +69,67 @@
 
   					<div class="card-body">
     					<form>
+    					<!-- trazer as informações para os values a seguir do banco de dados -->
       					<div class="form-group">
-      						<!-- trazer values do banco de dados -->
         					<label >Nome</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
 
       					<div class="form-group">
         					<label >Endereço</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
 
 								<div class="form-group">
         					<label >e-mail</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
 
       					<div class="form-group">
         					<label >Telefone</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
 
       					<div class="form-group">
         					<label >Data de Nascimento</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
 
       					<div class="form-group">
         					<label >CPF</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
 
       					<div class="form-group">
         					<label >Nome agente comunitário de saúde</label>
-        					<input readonly="readonly"
+        					<input 
           				type="text" class="form-control" id="exampleInput" value=" ">
       					</div>
+
+      					<!-- <p>Ligação Concluída?</p>
+      					<div class="form-check form-check-inline">
+        					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        					<label class="form-check-label" for="inlineRadio1">Sim</label>
+      					</div>
+
+      					<div class="form-check form-check-inline">
+        					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        					<label class="form-check-label" for="inlineRadio1">Não</label>
+      					</div> -->
       					
       					<div class="form-group">
-							<label for="presidente">Voluntário aprovado?</label>
-  						<select class="form-control" name="presidente" id="presidente">
-  								<option value="0">Pendente</option>
-    							<option value="1">Aprovado</option>
-    							<option value="2">Rejeitado</option>
-    							
-  						</select>
-						</div>
-						
-						<div class="form-group">
 								<label class="control-label" for="submit"></label>
 								<div>
 										<button id="submit" type="button" class="btn btn-success">Salvar</button>
-										<button type="button" class="btn btn-danger" onclick=" tabelaCandidato()">Cancelar</button>
+										<button type="button" class="btn btn-danger" onclick=" tabelaVoluntario()">Cancelar</button>
 								</div>
 							</div>
-
-
-      					<p></p>
-      					<div class="form-check form-check-inline">
-        					<!-- <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        					<label class="form-check-label" for="inlineRadio1">Aprovado</label> -->
-      					</div>
-
-      					<div class="form-check form-check-inline">
-        					<!-- <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        					<label class="form-check-label" for="inlineRadio1">Rejeitado</label> -->
-      					</div>
-      					
-      					<div class="form-check form-check-inline">
-        					<!-- <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-        					<label class="form-check-label" for="inlineRadio1">Pendente</label> -->
-      					</div>
-      					
     			</form>
   		</div>
   </div>
@@ -157,33 +141,13 @@
 
       <div class="form-group">
         <label for="comment">Observações</label>
-        <textarea class="form-control" rows="26" id="comment" style="resize: none;"></textarea>
+        <textarea class="form-control" rows="22" id="comment" style="resize: none;"></textarea>
       </div>
 
   </form>
 </div>
 
 </div>
-
-	<div class="col-sm-12 col-md-6">
-		<div class="card-body">
-    		<form>
-      			<div class="form-group">
-      				<button type="submit" class="btn btn-outline-primary  btn-block" style="visibility: hidden;"  >Salvar</button>
-      			</div>
-    		</form>
-  		</div>
-	</div>
-	
-	<div class="col-sm-12 col-md-6">
-		<div class="card-body">
-    		<form>
-      			<div class="form-group">
-      				<button type="submit" class="btn btn-outline-primary  btn-block" style="visibility: hidden;" >Cancelar</button>
-      			</div>
-    		</form>
-  		</div>
-	</div>
 
 <!-- col-sm-12 col-md-6 -->
 <!-- col-3" -->
@@ -198,7 +162,7 @@
   <div class="card-body">
     <form>
       <div class="form-group">
-      <!-- <button type="submit" class="btn btn-outline-primary  btn-block">Salvar</button> -->
+      <button type="submit" class="btn btn-outline-primary  btn-block" style="visibility: hidden;" >Salvar</button>
       </div>
     </form>
   </div>
@@ -208,8 +172,7 @@
   <div class="card-body">
     <form>
       <div class="form-group">
-      <p></p>
-      <!-- <button type="submit" class="btn btn-outline-primary  btn-block">Cancelar</button> -->
+      <button type="submit" class="btn btn-outline-primary  btn-block" style="visibility: hidden;" >Aprovado</button>
       </div>
     </form>
   </div>
@@ -219,7 +182,7 @@
   <div class="card-body">
     <form>
       <div class="form-group">
-      <!-- <button type="submit" class="btn btn-outline-primary  btn-block">Rejeitado</button> -->
+      <button type="submit" class="btn btn-outline-primary  btn-block" style="visibility: hidden;" >Rejeitado</button>
       </div>
     </form>
   </div>
@@ -235,12 +198,11 @@
 </style>
 
 <script>
-function tabelaCandidato()
+function tabelaVoluntario()
 {
-     location.href = "gridCandidatoVoluntario.html";
+     location.href = "gridVoluntario.html";
 }
 </script>
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="node_modules/jquery/dist/jquery.js"></script>
