@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tabela relação presidente/morador</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
@@ -12,38 +11,37 @@ content="width=device-width, initial-scale=1">
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-	<script src="js/tabela.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="js/tabela.js"></script>
 
 
 </head>
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="logo.jpg" class="img-fluid rounded-circle" width="30" height="30" alt="logo" loading="lazy"></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="InicioLogado0.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index0.html">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado0.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index0.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 <body>
 
@@ -57,52 +55,46 @@ content="width=device-width, initial-scale=1">
 							<b>Famílias</b>
 						</h2>
 					</div>
-					
+
 					<div class="col-sm-4">
-						<button type="button" class="btn btn-info add-new" onclick="novaFamilia()">
+						<button type="button" class="btn btn-info add-new"
+							onclick="novaFamilia()">
 							<i class="fa fa-plus"></i> Adicionar
 						</button>
 					</div>
-					
+
 					<div class="col-sm-4">
 						<p></p>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Pesquisa">
+							<input type="text" class="form-control" placeholder="Pesquisa"
+								id="myInput" onkeyup="myFunction()">
 							<div class="input-group-append">
 								<button class="btn btn-secondary" type="button">
 									<i class="fa fa-search"></i>
 								</button>
 							</div>
 						</div>
-			</div>
+					</div>
 				</div>
 			</div>
-			
-			
 
-			<!-- <form class="form-inline my-2 my-lg-0" id="pesquisaPorPresidente">
-      	<input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Pesquisa">
-      	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisa</button>
-    	</form> -->
 
-		<div>
-			
-		</div>
-			
+			<div></div>
+
 			<p></p>
 
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>Presidente</th>
-						<th>Rua</th>
-						<th style="width: 85px;">N.º</th>
-						<th>Complemento</th>
-						<th>Nome</th>
-						<th>Contato</th>
-						<th>Actions</th>
-					</tr>
-				</thead>
+			<table class="table table-bordered" id="myTable">
+				<!-- <thead> -->
+				<tr class="header">
+					<th>Presidente</th>
+					<th>Rua</th>
+					<th style="width: 85px;">N.º</th>
+					<th>Complemento</th>
+					<th>Nome</th>
+					<th>Contato</th>
+					<th>Actions</th>
+				</tr>
+				<!-- </thead> -->
 				<tbody>
 					<tr>
 						<td>Sara Mendonça</td>
@@ -111,35 +103,29 @@ content="width=device-width, initial-scale=1">
 						<td>--</td>
 						<td>Gisela de Morais</td>
 						<td>11 2343-6790</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar1.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar1.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>John Doe</td>
 						<td>Rua 1</td>
 						<td>171</td>
-						<td>esquina do ponto</td>
+						<td>casa 2</td>
 						<td>José Dorival</td>
 						<td>11 2343-6789</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Sara Mendonça</td>
 						<td>Rua Camomila</td>
@@ -147,218 +133,208 @@ content="width=device-width, initial-scale=1">
 						<td>--</td>
 						<td>Bruna Donatto</td>
 						<td>11 2343-6800</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Sara Mendonça</td>
 						<td>Rua Camomila</td>
 						<td>567</td>
-						<td>rua da quitanda</td>
+						<td>--</td>
 						<td>Jean Mendonça</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Jones Santos</td>
 						<td>Rua São João</td>
 						<td>62</td>
-						<td>rua da quitanda</td>
+						<td>--</td>
 						<td>Giovane Almeida</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Amanda Buarque</td>
 						<td>Rua Camélias</td>
 						<td>89</td>
-						<td>rua da quitanda</td>
+						<td>apto 4</td>
 						<td>Fátima Silva</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Maria Lucia da Silva</td>
 						<td>Rua Violetas</td>
 						<td>130</td>
-						<td> -- </td>
+						<td>--</td>
 						<td>Margarete Bueno</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Wilma da Silva</td>
 						<td>Rua Serena</td>
 						<td>34</td>
-						<td>rua da quitanda</td>
+						<td>apto 18</td>
 						<td>Selma Meire</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Wilma da Silva</td>
 						<td>Rua Serena</td>
 						<td>80</td>
-						<td>rua da quitanda</td>
+						<td>--</td>
 						<td>Aparecido Moura</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Amanda Buarque</td>
 						<td>Rua Camélias</td>
 						<td>850</td>
-						<td>rua da quitanda</td>
+						<td>--</td>
 						<td>Maite dos Santos</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Clélia de Oliveira</td>
 						<td>Rua Marina</td>
 						<td>12</td>
-						<td>rua da quitanda</td>
+						<td>casa 4</td>
 						<td>Jessica Amanda</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Clélia de Oliveira</td>
 						<td>Rua Marina</td>
 						<td>345</td>
-						<td>rua da quitanda</td>
+						<td>--</td>
 						<td>Suellen Silva</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
+
 					<tr>
 						<td>Jessica de Oliveira</td>
 						<td>Rua São João</td>
 						<td>832</td>
-						<td>rua da quitanda</td>
+						<td>--</td>
 						<td>Mario dos Santos</td>
 						<td>11 2343-6345</td>
-						<td>
-							<a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a>
-
-							<a class="edit" title="Edit" href="cadastroFamiliaEditar0.html"
-							data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-
-							<a class="delete" title="Delete" data-toggle="tooltip"><i
+						<td><a class="add" title="Add" data-toggle="tooltip"><i
+								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
+							href="cadastroFamiliaEditar0.html" data-toggle="tooltip"><i
+								class="material-icons">&#xE254;</i></a> <a class="delete"
+							title="Delete" data-toggle="tooltip"><i
 								class="material-icons">&#xE872;</i></a></td>
 					</tr>
-					
-					
-					
-					
+
+
+
+
 				</tbody>
 			</table>
 		</div>
 	</div>
 
 	<style>
+body {
+	padding-top: 70px;
+}
 
-		body { padding-top: 70px; }
+navbar-expand {-sm |-md|-lg|-xl
+	
+}
+</style>
 
-		navbar-expand{-sm|-md|-lg|-xl}
-
-	</style>
-
-	<script>
-		function novaFamilia()
-		{
-     	location.href = "cadastroFamiliaNovo0.html";
+<script>
+		function novaFamilia() {
+			location.href = "cadastroFamiliaNovo0.html";
 		}
+		
+
+		function myFunction() {
+		  var input, filter, table, tr, td, i, txtValue;
+		  input = document.getElementById("myInput");
+		  filter = input.value.toUpperCase();
+		  table = document.getElementById("myTable");
+		  tr = table.getElementsByTagName("tr");
+		  for (i = 0; i < tr.length; i++) {
+		    td = tr[i].getElementsByTagName("td")[0];
+		    if (td) {
+		      txtValue = td.textContent || td.innerText;
+		      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		        tr[i].style.display = "";
+		      } else {
+		        tr[i].style.display = "none";
+		      }
+		    }       
+		  }
+		}
+		
+		
 </script>
 
 </body>

@@ -64,7 +64,8 @@
 					<div class="col-sm-4">
 						<p></p>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Pesquisa">
+							<input type="text" class="form-control" placeholder="Pesquisa"
+								id="myInput" onkeyup="myFunction()">
 							<div class="input-group-append">
 								<button class="btn btn-secondary" type="button">
 									<i class="fa fa-search"></i>
@@ -76,9 +77,9 @@
 
 				</div>
 			</div>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
+			<table class="table table-bordered" id="myTable">
+				<!-- <thead> -->
+					<tr class="header">
 						<th>Nome</th>
 						<th>Endereço</th>
 						<th style="width: 70px;">N.º</th>
@@ -87,7 +88,7 @@
 						<th>Ativo?</th>
 						<th>Actions</th>
 					</tr>
-				</thead>
+				<!-- </thead> -->
 				<tbody>
 				<tr>
 						<td>Amanda Buarque</td>
@@ -110,7 +111,7 @@
 						<td>Rua das Macieiras</td>
 						<td>400</td>
 						<td>(11)97689-3032</td>
-						<td>John</td>
+						<td>John Pedro</td>
 						<td>Sim</td>
 
 						<td><a class="add" title="Add" data-toggle="tooltip"><i
@@ -126,7 +127,7 @@
 						<td>Rua da Uva</td>
 						<td>48</td>
 						<td>(11)96750-8981</td>
-						<td>John</td>
+						<td>John Pedro</td>
 						<td>Sim</td>
 
 						<td><a class="add" title="Add" data-toggle="tooltip"><i
@@ -158,7 +159,7 @@
 						<td>Rua do Centro</td>
 						<td>560</td>
 						<td>(11)9451-3309</td>
-						<td>John</td>
+						<td>John Pedro</td>
 						<td>Sim</td>
 
 						<td><a class="add" title="Add" data-toggle="tooltip"><i
@@ -238,7 +239,7 @@
 						<td>Rua das Amoreiras</td>
 						<td>80</td>
 						<td>(11)97665-4359</td>
-						<td>John</td>
+						<td>John Pedro</td>
 						<td>Sim</td>
 
 						<td><a class="add" title="Add" data-toggle="tooltip"><i
@@ -254,7 +255,7 @@
 						<td>Rua da Uva</td>
 						<td>10</td>
 						<td>(11)93729-6791</td>
-						<td>John</td>
+						<td>John Pedro</td>
 						<td>Sim</td>
 
 						<td><a class="add" title="Add" data-toggle="tooltip"><i
@@ -334,6 +335,25 @@ navbar-expand {-sm |-md|-lg|-xl
 		function novoVoluntario() {
 			location.href = "formVoluntarioNovo0.html";
 		}
+		
+		function myFunction() {
+			  var input, filter, table, tr, td, i, txtValue;
+			  input = document.getElementById("myInput");
+			  filter = input.value.toUpperCase();
+			  table = document.getElementById("myTable");
+			  tr = table.getElementsByTagName("tr");
+			  for (i = 0; i < tr.length; i++) {
+			    td = tr[i].getElementsByTagName("td")[0];
+			    if (td) {
+			      txtValue = td.textContent || td.innerText;
+			      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			        tr[i].style.display = "";
+			      } else {
+			        tr[i].style.display = "none";
+			      }
+			    }       
+			  }
+			}
 	</script>
 
 
