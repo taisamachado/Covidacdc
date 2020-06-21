@@ -11,7 +11,7 @@ margin: 30px auto;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .container{
- width: -moz-fit-content;
+width: -moz-fit-content;
 width: -webkit-fit-content;
 width: fit-content;
 }
