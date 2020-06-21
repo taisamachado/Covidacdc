@@ -44,6 +44,8 @@
 		 <li class="nav-item">
 			 <a class="nav-link" href="./index0.html">Logout</a>
 		 </li>
+
+		 
 	 </ul>
  </div>
 </div>
@@ -73,19 +75,19 @@
       					<div class="form-group">
         					<label >Nome</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="Maria Lucia da Silva">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o nome">
       					</div>
 
       					<div class="form-group">
         					<label >Endereço</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="Rua das Laranjeiras">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o endereço">
       					</div>
       					
       					<div class="form-group">
         					<label >Número</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="2">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite número">
       					</div>
       					
       					<div class="form-group">
@@ -97,35 +99,40 @@
 						<div class="form-group">
         					<label >Telefone de contato</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="(11)95642-3356">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o telefone">
       					</div>
-
-								<div class="form-group">
+      					
+						<div class="form-group">
         					<label >e-mail</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="marialucia@gmail.com">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o e-mail">
       					</div>
 
+      					
 
       					<div class="form-group">
         					<label >Data de Nascimento</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="17/05/1980">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite a data de nascimento">
       					</div>
-      					
-      					<div class="form-group">
+
+						<div class="form-group">
         					<label >RG</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" placeholder="Digite o RG">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o CPF">
       					</div>
 
       					<div class="form-group">
         					<label >CPF</label>
         					<input 
-          				type="text" class="form-control" id="exampleInput" value="452.876.345-05">
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o CPF">
       					</div>
 
-      					
+      					<!-- <div class="form-group">
+        					<label >Nome agente comunitário de saúde</label>
+        					<input 
+          				type="text" class="form-control" id="exampleInput" placeholder="Digite o nome do agente comunitário de saúde">
+      					</div> -->
 
       					<!-- <p>Ligação Concluída?</p>
       					<div class="form-check form-check-inline">
@@ -153,20 +160,22 @@
 
   <div class="card-body">
     <form>
-		<div class="form-group">
-        	<label >Nome agente comunitário de saúde</label>
-        	<input type="text" class="form-control" id="exampleInput" value="Bruna Matias">
-      	</div>
-      					
-      	<div class="form-group">
-        	<label for="comment">Observações</label>
-        	<textarea class="form-control" rows="24" id="comment" style="resize: none;"></textarea>
-      	</div>
+
+	  <div class="form-group">
+      <label >Nome agente comunitário de saúde</label>
+      <input 
+      type="text" class="form-control" id="exampleInput" placeholder="Digite o nome do agente comunitário de saúde">
+    	</div>
+    
+      <div class="form-group">
+        <label for="comment">Observações</label>
+        <textarea class="form-control" rows="24" id="comment" style="resize: none;"></textarea>
+      </div>
 		
-		<div class="custom-control custom-switch">
-  			<input type="checkbox" class="custom-control-input" id="customSwitch1" data-size="lg" checked >
-  			<label class="custom-control-label" for="customSwitch1">Líder de Rua ativo?</label>
-		</div>
+	 <div class="custom-control custom-switch">
+  		<input type="checkbox" class="custom-control-input" id="customSwitch1" data-size="lg">
+  		<label class="custom-control-label" for="customSwitch1">Líder de Rua ativo?</label>
+	</div>
 
   </form>
 </div>
@@ -220,7 +229,6 @@
 	navbar-expand{-sm|-md|-lg|-xl}
 
 </style>
-
 <script>
 function tabelaVoluntario()
 {
