@@ -3,47 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
-<title>Cadastro Presidente/Morador</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Família</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-	<script src="js/tabela.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="js/tabela.js"></script>
 
 
 </head>
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="logo.jpg" class="img-fluid rounded-circle" width="30" height="30" alt="logo" loading="lazy"></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="InicioLogado.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 <body>
 
@@ -61,70 +59,79 @@ content="width=device-width, initial-scale=1">
 			</div>
 
 			<div class="row">
-			
+
 				<div class="col-sm-12 col-md-6">
 					<form>
 
 						<div class="form-group">
-						<!-- trazer os presidentes do banco de dados para preencher o dropdown a seguir e os values -->
-							<label for="presidente">Presidente</label>
-  						<select class="form-control" name="presidente" id="presidente">
-  								<option value="0" selected > - Selecione o Presidente - </option>
-    							<option value="1"> </option>
-    							<option value="2"> </option>
-    							<option value="3"> </option>
-    							<option value="4"> </option>
-    							
-  						</select>
+							<!-- trazer os presidentes do banco de dados para preencher o dropdown a seguir e os values -->
+							<label for="presidente">Líder de Rua</label> <select
+								class="form-control" name="presidente" id="presidente">
+								<option value="0" selected>- Selecione o Líder de Rua
+									-</option>
+								<option value="1"></option>
+								<option value="2"></option>
+								<option value="3"></option>
+								<option value="4"></option>
+
+							</select>
 						</div>
 
 						<div class="form-group">
-							<label >Rua</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Rua</label> <input type="text" class="form-control"
+								id="exampleInput" value="" placeholder="Digite a rua">
 						</div>
 
 						<div class="form-group">
-							<label >Número</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Número</label> <input type="text" class="form-control"
+								id="exampleInput" value="" placeholder="Digite o número">
 						</div>
 
 						<div class="form-group">
-							<label >Complemento</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Complemento</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
+								placeholder="Digite o complemento">
 						</div>
 
 						<div class="form-group">
-							<label >Ponto de Referência</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Ponto de Referência</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
+								placeholder="Digite o ponto de referência">
 						</div>
 
 						<div class="form-group">
-							<label >Nome do representante da família</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Nome do representante da família</label> <input
+								type="text" class="form-control" id="exampleInput" value=""
+								placeholder="Digite o nome do representante">
 						</div>
 
 						<div class="form-group">
-							<label >CPF do representante da família</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>CPF do representante da família</label> <input
+								type="text" class="form-control" id="exampleInput" value=""
+								placeholder="Digite o CPF do representante">
 						</div>
 
 						<div class="form-group">
-							<label >RG do representante da família</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>RG do representante da família</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
+								placeholder="Digite o RG do representante">
 						</div>
 
 						<div class="form-group">
-							<label >Data de nascimento do representante da família</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Data de nascimento do representante da família</label> <input
+								type="text" class="form-control" id="exampleInput" value=""
+								placeholder="Digite a data de nascimento">
 						</div>
-						
+
 						<div class="form-group">
-								<label class="control-label" for="submit"></label>
-								<div>
-										<button id="submit" type="button" class="btn btn-success" onclick="msg()">Salvar</button>
-										<button type="button" class="btn btn-danger" onclick=" tabelaFamilia()">Cancelar</button>
-								</div>
+							<label class="control-label" for="submit"></label>
+							<div>
+								<button id="submit" type="button" class="btn btn-success"
+									onclick="msg()">Salvar</button>
+								<button type="button" class="btn btn-danger"
+									onclick=" tabelaFamilia()">Cancelar</button>
 							</div>
+						</div>
 					</form>
 
 				</div>
@@ -133,44 +140,52 @@ content="width=device-width, initial-scale=1">
 					<form>
 
 						<div class="form-group">
-							<label >Telefone de Contato</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>Telefone de Contato</label> 
+							<input type="text" class="form-control" id="exampleInput" value=""
+								placeholder="Digite o telefone de contato">
 						</div>
 
 						<div class="form-group">
-							<label >e-mail</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
-						</div>
-						
-						<div class="form-group">
-							<label >N.º crianças</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>e-mail</label> <input type="text" class="form-control"
+								id="exampleInput" value=""
+								placeholder="Digite o e-mail de contato">
 						</div>
 
 						<div class="form-group">
-							<label >N.º idosos</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>N.º crianças</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
+									placeholder="Digite o número de crianças">
 						</div>
 
 						<div class="form-group">
-							<label >N.º adultos</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>N.º idosos</label> 
+							<input type="text"
+								class="form-control" id="exampleInput" value=""
+									placeholder="Digite o número de idosos">
 						</div>
 
 						<div class="form-group">
-							<label >Total habitantes</label>
-							<input type="text" class="form-control" id="exampleInput" value=" ">
+							<label>N.º adultos</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
+									placeholder="Digite o número de adultos">
+						</div>
+
+						<div class="form-group">
+							<label>Total habitantes</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
+									placeholder="Digite o número total de habitantes">
 						</div>
 
 
-							<div class="form-group">
-								<label for="comment">Observações</label>
-								<textarea class="form-control" rows="8" id="comment" style="resize: none;"></textarea>
-							</div>
+						<div class="form-group">
+							<label for="comment">Observações</label>
+							<textarea class="form-control" rows="8" id="comment"
+								style="resize: none;"></textarea>
+						</div>
 
-							
 
-							<!-- <div class="form-group">
+
+						<!-- <div class="form-group">
   							<label class="col-md-4 control-label" for="submit"></label>
   							<div class="col-md-8">
 										<button type="button" class="btn btn-success">Salvar</button>
@@ -180,8 +195,8 @@ content="width=device-width, initial-scale=1">
 						</div> -->
 						<!-- <button id="submit" name="submit" class="btn btn-primary" value="1">Create Profile</button>
 						<button type="reset" class="btn btn-default pull-right">Cancel</button> -->
-				    <!-- <a href="/link-to/whatever-address/" id="cancel" name="cancel" class="btn btn-default">Cancel</a> -->
-							<!-- <button type="submit" class="btn btn-primary">Salvar</button> -->
+						<!-- <a href="/link-to/whatever-address/" id="cancel" name="cancel" class="btn btn-default">Cancel</a> -->
+						<!-- <button type="submit" class="btn btn-primary">Salvar</button> -->
 
 					</form>
 				</div>
@@ -198,24 +213,32 @@ content="width=device-width, initial-scale=1">
 			</div>
 
 			<style>
-
-				body { padding-top: 70px; }
-
-				navbar-expand{-sm|-md|-lg|-xl}
-
-			</style>
-
-			<script>
-function tabelaFamilia()
-{
-     location.href = "gridPresidenteFamilia.html";
+body {
+	padding-top: 70px;
 }
 
-function msg() {
-	  alert("Enviado com sucesso!");
-	}
+navbar-expand {-sm |-md|-lg|-xl
 	
-</script>
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
+
+			<script>
+				function tabelaFamilia() {
+					location.href = "gridPresidenteFamilia.html";
+				}
+
+				function msg() {
+					alert("Enviado com sucesso!");
+				}
+			</script>
 
 			<table class="table table-bordered">
 				<thead>

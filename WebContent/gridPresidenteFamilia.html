@@ -58,10 +58,25 @@ content="width=device-width, initial-scale=1">
 						</h2>
 					</div>
 					<div class="col-sm-4">
-						<button type="button" class="btn btn-info add-new" onclick="novaFamilia()">
+						<button type="button" class="btn btn-info add-new" 
+							onclick="novaFamilia()">
 							<i class="fa fa-plus"></i> Adicionar
 						</button>
 					</div>
+					
+					<div class="col-sm-4">
+						<p></p>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Pesquisa"
+								id="" onkeyup="">
+							<div class="input-group-append">
+								<button class="btn btn-secondary" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 
@@ -73,11 +88,13 @@ content="width=device-width, initial-scale=1">
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Presidente</th>
+						<th>Líder de Rua</th>
 						<th>Rua</th>
 						<th style="width:70px;">N.º</th>
 						<th>Nome representante Família</th>
+						<!-- <th>Nome</th> -->
 						<th>Telefone de Contato</th>
+						<!-- <th>Contato</th> -->
 						<th>Total de habitantes</th>
 						<th>Actions</th>
 					</tr>
@@ -111,6 +128,14 @@ content="width=device-width, initial-scale=1">
 		body { padding-top: 70px; }
 
 		navbar-expand{-sm|-md|-lg|-xl}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 	</style>
 

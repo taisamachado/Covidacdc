@@ -54,30 +54,43 @@
 						</h2>
 					</div>
 					<div class="col-sm-4">
-						<!-- <button type="button" class="btn btn-info add-new"
+						<button type="button" class="btn btn-info add-new"
 							onclick="novoVoluntario()">
 							<i class="fa fa-plus"></i> Adicionar
-						</button> -->
+						</button>
 					</div>
+					
+					<div class="col-sm-4">
+						<p></p>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Pesquisa"
+								id="" onkeyup="">
+							<div class="input-group-append">
+								<button class="btn btn-secondary" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 			<table class="table table-bordered">
-				<thead>
-					<tr>
+				<!-- <thead> -->
+					<tr class="header">
 						<th>Nome</th>
-						<th>Sobrenome</th>
 						<th>Endereço</th>
-						<!-- <th>Data de Nascimento</th> -->
+						<th style="width: 70px;">N.º</th>
 						<th>Telefone</th>
-						<!-- <th>CPF</th> -->
 						<th>Agente comunitária</th>
-						<!-- <th>E-mail</th> -->
+						<th>Ativo?</th>
 						<th>Actions</th>
 					</tr>
-				</thead>
+				<!-- </thead> -->
 				<tbody>
 					<!-- trazer as informações a seguir do banco de dados -->
 					<tr>
+						<td> </td>
 						<td> </td>
 						<td> </td>
 						<td> </td>
@@ -103,6 +116,15 @@ body {
 navbar-expand {-sm |-md|-lg|-xl
 	
 }
+
+ .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+ 
 </style>
 
 	<script>
