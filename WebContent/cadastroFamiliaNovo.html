@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastro Presidente/Morador</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
@@ -12,38 +11,37 @@ content="width=device-width, initial-scale=1">
 	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+<link rel="stylesheet"
+	href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-	<script src="js/tabela.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<script src="js/tabela.js"></script>
 
 
 </head>
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="logo.jpg" class="img-fluid rounded-circle" width="30" height="30" alt="logo" loading="lazy"></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="InicioLogado.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 <body>
 
@@ -65,196 +63,153 @@ content="width=device-width, initial-scale=1">
 				<div class="col-sm-12 col-md-6">
 					<form>
 
-						<!-- trazer os presidentes cadastrados no banco de dados -->
 						<div class="form-group">
-							<label for="presidente">Líder de Rua</label>
-  						<select class="form-control" name="presidente" id="presidente">
-  								<option value="0" selected > - Selecione o Líder de Rua - </option>
-    							<option value="1"> </option>
-    							<option value="2"> </option>
-    							<option value="3"> </option>
-    							<option value="4"> </option>
-  						</select>
+							<label for="presidente">Líder de Rua</label> <select
+								class="form-control" name="presidente" id="presidente">
+								<option value="0" selected>- Selecione o Líder de Rua
+									-</option>
+								<option value="1"></option>
+								<option value="2"></option>
+								<option value="3"></option>
+								<option value="4"></option>
+							</select>
 						</div>
 
 						<div class="form-group">
-							<label>Rua</label>
-							<input type="text" class="form-control" id="txtRua" placeholder="Digite a rua">
+							<label>Rua</label> <input type="text" class="form-control"
+								id="txtRua" placeholder="Digite a rua">
 						</div>
 
 						<div class="form-group">
-							<label>Número</label>
-							<input type="text" class="form-control" id="txtNumero" placeholder="Digite o número">
+							<label>Número</label> <input type="text" class="form-control"
+								id="txtNumero" placeholder="Digite o número">
 						</div>
 
 						<div class="form-group">
-							<label>Complemento</label>
-							<input type="text" class="form-control" id="txtComplemento" placeholder="Digite o complemento">
+							<label>Complemento</label> <input type="text"
+								class="form-control" id="txtComplemento"
+								placeholder="Digite o complemento">
 						</div>
 
 						<div class="form-group">
-							<label>Ponto de Referência</label>
-							<input type="text" class="form-control" id="txtReferencia" placeholder="Digite o ponto de referência">
+							<label>Ponto de Referência</label> <input type="text"
+								class="form-control" id="txtReferencia"
+								placeholder="Digite o ponto de referência">
 						</div>
 
 						<div class="form-group">
-							<label>Nome do representante da família</label>
-							<input type="text" class="form-control" id="txtNomeFamilia" placeholder="Digite o nome do representante">
+							<label>Nome do representante da família</label> <input
+								type="text" class="form-control" id="txtNomeFamilia"
+								placeholder="Digite o nome do representante">
 						</div>
 
 						<div class="form-group">
-							<label>CPF do representante da família</label>
-							<input type="text" class="form-control" id="exampleInput" placeholder="Digite o CPF do representante">
+							<label>CPF do representante da família</label> <input type="text"
+								class="form-control" id="exampleInput"
+								placeholder="Digite o CPF do representante">
 						</div>
 
 						<div class="form-group">
-							<label>RG do representante da família</label>
-							<input type="text" class="form-control" id="exampleInput" placeholder="Digite o RG do representante">
+							<label>RG do representante da família</label> <input type="text"
+								class="form-control" id="exampleInput"
+								placeholder="Digite o RG do representante">
 						</div>
 
 						<div class="form-group">
-							<label>Data de nascimento do representante da família</label>
-							<input type="text" class="form-control" id="txtDataNascimento" placeholder="Digite a data de nascimento">
+							<label>Data de nascimento do representante da família</label> <input
+								type="text" class="form-control" id="txtDataNascimento"
+								placeholder="Digite a data de nascimento">
 						</div>
-						
+
 						<div class="form-group">
-								<label class="control-label" for="submit"></label>
-								<div>
-										<button id="submit" type="button" class="btn btn-success" onclick="validate()">Salvar</button>
-										<button type="button" class="btn btn-danger" onclick=" tabelaFamilia()">Cancelar</button>
-								</div>
+							<label class="control-label" for="submit"></label>
+							<div>
+								<button id="submit" type="button" class="btn btn-success"
+									onclick="validate()">Salvar</button>
+								<button type="button" class="btn btn-danger"
+									onclick=" tabelaFamilia()">Cancelar</button>
 							</div>
+						</div>
 					</form>
 
 				</div>
 
 				<div class="col-sm-12 col-md-6">
 					<form>
-					
+
 						<div class="form-group">
-							<label>Telefone de Contato</label>
-							<input type="text" class="form-control" id="exampleInput" value="" 
+							<label>Telefone de Contato</label> <input type="text"
+								class="form-control" id="exampleInput" value=""
 								placeholder="Digite o telefone de contato">
 						</div>
 
 						<div class="form-group">
-							<label>e-mail</label> <input type="text" class="form-control" id="exampleInput"
-								value="" placeholder="Digite o e-mail de contato">
+							<label>e-mail</label> <input type="text" class="form-control"
+								id="exampleInput" value=""
+								placeholder="Digite o e-mail de contato">
 						</div>
 
 						<div class="form-group">
-							<label>N.º crianças</label>
-							<input type="text" class="form-control" id="txtNCriancas" 
+							<label>N.º crianças</label> <input type="text"
+								class="form-control" id="txtNCriancas"
 								placeholder="Digite o número de crianças">
 						</div>
 
 						<div class="form-group">
-							<label>N.º idosos</label>
-							<input type="text" class="form-control" id="txtNIdosos" 
-								placeholder="Digite o número de idosos">
+							<label>N.º idosos</label> <input type="text" class="form-control"
+								id="txtNIdosos" placeholder="Digite o número de idosos">
 						</div>
 
 						<div class="form-group">
-							<label>N.º adultos</label>
-							<input type="text" class="form-control" id="txtNAdultos" 
+							<label>N.º adultos</label> <input type="text"
+								class="form-control" id="txtNAdultos"
 								placeholder="Digite o número de adultos">
 						</div>
 
 						<div class="form-group">
-							<label>Total habitantes</label>
-							<input type="text" class="form-control" id="txtTotalHabitantes" 
+							<label>Total habitantes</label> <input type="text"
+								class="form-control" id="txtTotalHabitantes"
 								placeholder="Digite o número total de habitantes">
 						</div>
 
 
-							<div class="form-group">
-								<label for="comment">Observações</label>
-								<textarea class="form-control" rows="8" id="txtObservacoes" style="resize: none;"></textarea>
-							</div>
+						<div class="form-group">
+							<label for="comment">Observações</label>
+							<textarea class="form-control" rows="8" id="txtObservacoes"
+								style="resize: none;"></textarea>
+						</div>
 
 					</form>
 				</div>
-				<div class="col-12">
-					
-
-				</div>
+				<div class="col-12"></div>
 
 			</div>
 
-			<style>
+<style>
 
-				body { padding-top: 70px; }
+body {
+	padding-top: 70px;
+}
 
-				navbar-expand{-sm|-md|-lg|-xl}
-
-				.container {
-					width: 100%;
-					padding-right: 15px;
-					padding-left: 15px;
-					margin-right: auto;
-					margin-left: auto;
-				}
-			</style>
-
-			<script>
-			
-			
-			function tabelaFamilia() {
-				location.href = "gridPresidenteFamilia.html";
-			}
-
-			/* function msg() {
-				alert("Enviado com sucesso!");
-			} */
-		
-/* 
-
-function validate() {
-	var Nome = document.getElementById("txtNomeFamilia").value;
-	validacao = 0;
-	   if (Nome == '') {
-		  alert("preencha o Nome");
-		  validacao = validacao +1;
-	  	} 
-		
-	
-		if (validacao == 0){
-			msg();
-		}
-		else{
-			//alert("verifique o preenchimento dos campos obrigatórios");
-		}
+navbar-expand {-sm |-md|-lg|-xl
 	
 }
 
-function msg() {
-  alert("Enviado com sucesso!");
-} */
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
 
+<script>
+	function tabelaFamilia() {
+		location.href = "gridPresidenteFamilia.html";
+	}
 </script>
 
-			<table class="table table-bordered">
-				<thead>
-					<!-- <tr>
-						<th>Presidente</th>
-						<th>Rua</th>
-						<th>N.º</th>
-						<th>Complemento</th>
-						<th>P. referência</th>
-						<th>Nome</th>
-						<th>RG</th>
-						<th>CPF</th>
-						<th>Data Nasc.</th>
-						<th>Contato</th>
-						<th>N.º crianças</th>
-						<th>N.º adultos</th>
-						<th>N.º idosos</th>
-						<th>Total habitantes</th>
-						<th>Actions</th>
-					</tr> -->
-				</thead>
-
-			</table>
 		</div>
 	</div>
 </body>
