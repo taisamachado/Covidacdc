@@ -97,13 +97,13 @@
 <!-- 						<td id = "telefone"> </td> -->
 <!-- 						<td id = "agcomunitario"> </td> -->
 <!-- 						<td id = "ativo"> </td> -->
-						<td><a class="add" title="Add" data-toggle="tooltip"><i
-								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
-							href="formVoluntarioEditar.html" data-toggle="tooltip"><i
-								class="material-icons">&#xE254;</i></a> <a class="delete"
-							title="Delete" data-toggle="tooltip"><i
-								class="material-icons">&#xE872;</i></a></td>
-					</tr>
+<!-- 						<td><a class="add" title="Add" data-toggle="tooltip"><i -->
+<!-- 								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit" -->
+<!-- 							href="formVoluntarioEditar.html" data-toggle="tooltip"><i -->
+<!-- 								class="material-icons">&#xE254;</i></a> <a class="delete" -->
+<!-- 							title="Delete" data-toggle="tooltip"><i -->
+<!-- 								class="material-icons">&#xE872;</i></a></td> -->
+<!-- 					</tr> -->
 				</tbody>
 			</table>
 		</div>
@@ -133,8 +133,10 @@ navbar-expand {-sm |-md|-lg|-xl
 			location.href = "formVoluntarioNovo.html";
 		}
 		
-// 		var fields = ["nome", "endereco", "numero", "telefone", "agcomunitario", "ativo", 
-// 			"actions"];
+		var icons = '<td><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
+		'<a class="edit" title="Edit" href="formVoluntarioEditar.html" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>'+
+		'<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
+		
 			
 // 				document.getElementById ( "nome" ).innerText="ok1"
 				fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
@@ -148,16 +150,14 @@ navbar-expand {-sm |-md|-lg|-xl
 									var temp = "";
 									
 									data.forEach((u)=>{
-// 										console.log(u[0])
-// 										console.log(u[1])
-// 										console.log(u[2])
 										temp += "<tr>";
 										temp += "<td>"+u[12]+"</td>";
 										temp += "<td>"+u[9]+"</td>";
 										temp += "<td>"+u[13]+"</td>";
 										temp += "<td>"+u[2]+"</td>";
 										temp += "<td>"+u[12]+"</td>";
-										temp += "<td>Sim</td></tr>";
+										temp += "<td>Sim</td>";
+										temp += icons+"</tr>";
 									})
  									
 									document.getElementById ( "data" ).innerHTML= temp;

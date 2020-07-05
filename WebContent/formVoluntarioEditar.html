@@ -220,7 +220,52 @@ navbar-expand {-sm |-md|-lg|-xl
 			function tabelaVoluntario() {
 				location.href = "gridVoluntario.html";
 			}
+			
+			fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
+					res=>{
+						res.json().then(
+						
+						data=>{
+							console.log(data)
+							if(data.length > 0){
+								
+								
+								data.forEach((u)=>{
+									
+									
+										
+// 									for (i = 0; i < fields.length; i++){
+										document.getElementById("nome").value=u[12]
+										document.getElementById("numero").value=u[13]
+										document.getElementById("cep").value=u[3] 
+										document.getElementById("telefone").value=u[2] 
+										document.getElementById("email").value=u[8] 
+										document.getElementById("dtNascimento").value=u[16] 
+										document.getElementById("rg").value=u[14] 
+										document.getElementById("cpf").value=u[7] 
+										
+// 									}
+									
+								})
+									
+							}
+						}
+						
+						
+						)
+						
+						
+					}
+			
+			)
+			
+			
+			
+			
 		</script>
+		
+		
+		
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="node_modules/jquery/dist/jquery.js"></script>
