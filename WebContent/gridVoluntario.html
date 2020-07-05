@@ -77,9 +77,9 @@
 			<table class="table table-bordered">
 				<!-- <thead> -->
 					<tr class="header">
-						<th>Nome</th>
-						<th>Endereço</th>
-						<th style="width: 70px;">N.º</th>
+						<th >Nome</th>
+						<th >Endereço</th>
+						<th style="width: 70px;" >N.º</th>
 						<th>Telefone</th>
 						<th>Agente comunitário</th>
 						<th>Ativo?</th>
@@ -89,12 +89,12 @@
 				<tbody>
 					
 					<tr>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
+						<td id = "nome"> </td>
+						<td id = "endereco"> </td>
+						<td id = "numero"> </td>
+						<td id = "telefone"> </td>
+						<td id = "agcomunitario"> </td>
+						<td id = "ativo"> </td>
 						<td><a class="add" title="Add" data-toggle="tooltip"><i
 								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit"
 							href="formVoluntarioEditar.html" data-toggle="tooltip"><i
@@ -130,6 +130,34 @@ navbar-expand {-sm |-md|-lg|-xl
 		function novoVoluntario() {
 			location.href = "formVoluntarioNovo.html";
 		}
+		
+		var fields = ["nome", "endereco", "numero", "telefone", "agcomunitario", "ativo", 
+			"actions"];
+			
+				document.getElementById ( "nome" ).innerText="ok1"
+				fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
+						res=>{
+							res.json().then(
+									
+							data=>{
+								if(data[0]){
+ 									for (i = 0; i < fields.length; i++){
+ 										document.getElementById(fields[i]).innerText=data[0][1];
+ 										fields[i].value=data[0][fields[i]];
+ 										console.log(fields[i]);
+										console.log(data[0][0])
+ 									} 
+								}
+							}
+							
+							
+							)
+							
+							
+						}
+				
+				)
+
 	</script>
 
 
