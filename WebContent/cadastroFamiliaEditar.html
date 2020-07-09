@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conecta Comunidade - Cadastro Família</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="css/font/materialIcons.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<!-- <script src="js/tabela.js"></script> -->
+
+
+</head>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<body>
+
+
+	<div class="container">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>
+							Cadastro da <b>Família</b>
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-12 col-md-6">
+					<form>
+
+						<div class="form-group">
+							<label for="liderDeRua">Líder de Rua</label> 
+							<select class="form-control" name="liderDeRua" id="liderDeRua">
+								<option value="0" selected>- Selecione o Líder de Rua -</option>
+								<option value="1"></option>
+								
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label>Rua</label> 
+							<input type="text" class="form-control"
+								id="rua" value="" placeholder="Digite a rua">
+						</div>
+
+						<div class="form-group">
+							<label>Número</label> 
+							<input type="text" class="form-control"
+								id="numero" value="" 
+								placeholder="Digite o número">
+						</div>
+
+						<div class="form-group">
+							<label>Complemento</label> 
+							<input type="text" class="form-control" 
+							id="complemento" value=""
+							placeholder="Digite o complemento">
+						</div>
+
+						<div class="form-group">
+							<label>Ponto de Referência</label> 
+							<input type="text" class="form-control" 
+								id="pontoReferencia" value=""
+								placeholder="Digite o ponto de referência">
+						</div>
+
+						<div class="form-group">
+							<label>Nome do representante da família</label> 
+							<input type="text" class="form-control" 
+								id="nomeRepresentante" value=""
+								placeholder="Digite o nome do representante">
+						</div>
+
+						<div class="form-group">
+							<label>CPF do representante da família</label> 
+							<input type="text" class="form-control" 
+								id="cpfRepresentante" value=""
+								placeholder="Digite o CPF do representante">
+						</div>
+
+						<div class="form-group">
+							<label>RG do representante da família</label> 
+							<input type="text" class="form-control" 
+								id="rgRepresentante" value=""
+								placeholder="Digite o RG do representante">
+						</div>
+
+						<div class="form-group">
+							<label>Data de nascimento do representante da família</label> 
+							<input type="text" class="form-control" 
+								id="nascimentoRepresentante" value=""
+								placeholder="Digite a data de nascimento">
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="submit"></label>
+							<div>
+								<button id="submit" type="button" class="btn btn-success"
+									onclick="msg()">Salvar</button>
+								<button type="button" class="btn btn-danger"
+									onclick=" tabelaFamilia()">Cancelar</button>
+							</div>
+						</div>
+					</form>
+
+				</div>
+
+				<div class="col-sm-12 col-md-6">
+					<form>
+
+						<div class="form-group">
+							<label>Telefone de Contato</label> 
+							<input type="text" class="form-control" 
+								id="telefone" value=""
+								placeholder="Digite o telefone de contato">
+						</div>
+
+						<div class="form-group">
+							<label>e-mail</label> <input type="text" class="form-control"
+								id="email" value=""
+								placeholder="Digite o e-mail de contato">
+						</div>
+
+						<div class="form-group">
+							<label>N.º crianças</label> 
+							<input type="text" class="form-control" 
+								id="nCriancas" value=""
+								placeholder="Digite o número de crianças">
+						</div>
+
+						<div class="form-group">
+							<label>N.º idosos</label> 
+							<input type="text" class="form-control" 
+								id="nIdosos" value=""
+								placeholder="Digite o número de idosos">
+						</div>
+
+						<div class="form-group">
+							<label>N.º adultos</label> 
+							<input type="text" class="form-control" 
+								id="nAdultos" value=""
+								placeholder="Digite o número de adultos">
+						</div>
+
+						<div class="form-group">
+							<label>Total habitantes</label> <input type="text" class="form-control" 
+								id="nHabitantes" value=""
+								placeholder="Digite o número total de habitantes">
+						</div>
+
+
+						<div class="form-group">
+							<label for="comment">Observações</label>
+							<textarea class="form-control" rows="8" 
+								id="observacoes"
+								style="resize: none;">
+							</textarea>
+						</div>
+
+					</form>
+				</div>
+				<div class="col-12">
+					
+				</div>
+
+			</div>
+
+<style>
+body {
+	padding-top: 70px;
+}
+
+navbar-expand {-sm |-md|-lg|-xl
+	
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
+
+			<script>
+				function tabelaFamilia() {
+					location.href = "gridPresidenteFamilia.html";
+				}
+
+			</script>
+
+		</div>
+	</div>
+</body>
+</html>

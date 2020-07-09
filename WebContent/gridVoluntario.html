@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conecta Comunidade - Líder de Rua</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="css/font/materialIcons.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<!-- <script src="js/tabela.js"></script> -->
+
+</head>
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<body>
+
+
+	<div class="container">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>
+							<b>Líderes de Rua</b>
+						</h2>
+					</div>
+					<div class="col-sm-4">
+						<button type="button" class="btn btn-info add-new"
+							onclick="novoVoluntario()">
+							<i class="fa fa-plus"></i> Adicionar
+						</button>
+					</div>
+					
+					<div class="col-sm-4">
+						<p></p>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Pesquisa"
+								id="" onkeyup="">
+							<div class="input-group-append">
+								<button class="btn btn-secondary" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<table class="table table-bordered">
+				<thead>
+					<tr >
+						<th >Nome</th>
+						<th >Endereço</th>
+						<th style="width: 70px;" >N.º</th>
+					    <th>Telefone</th>
+						<th>Agente comunitário</th>
+						<th>Ativo?</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody id="data">
+				
+				
+					
+<!-- 					<tr> -->
+<!-- 						<td id = "nome"> </td> -->
+<!-- 						<td id = "endereco"> </td> -->
+<!-- 						<td id = "numero"> </td> -->
+<!-- 						<td id = "telefone"> </td> -->
+<!-- 						<td id = "agcomunitario"> </td> -->
+<!-- 						<td id = "ativo"> </td> -->
+<!-- 						<td><a class="add" title="Add" data-toggle="tooltip"><i -->
+<!-- 								class="material-icons">&#xE03B;</i></a> <a class="edit" title="Edit" -->
+<!-- 							href="formVoluntarioEditar.html" data-toggle="tooltip"><i -->
+<!-- 								class="material-icons">&#xE254;</i></a> <a class="delete" -->
+<!-- 							title="Delete" data-toggle="tooltip"><i -->
+<!-- 								class="material-icons">&#xE872;</i></a></td> -->
+<!-- 					</tr> -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<style>
+body {
+	padding-top: 70px;
+}
+
+navbar-expand {-sm |-md|-lg|-xl
+	
+}
+
+ .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+ 
+</style>
+
+	<script>
+		function novoVoluntario() {
+			location.href = "formVoluntarioNovo.html";
+		}
+		
+		var icons = '<td><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
+		'<a class="edit" title="Edit" href="formVoluntarioEditar.html" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>'+
+		'<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
+		
+			
+// 				document.getElementById ( "nome" ).innerText="ok1"
+				fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
+						res=>{
+							res.json().then(
+							
+							data=>{
+								console.log(data)
+									
+									var temp = "";
+									
+									data.forEach((u)=>{
+										temp += "<tr>";
+										temp += "<td>"+u[12]+"</td>";
+										temp += "<td>"+u[9]+"</td>";
+										temp += "<td>"+u[13]+"</td>";
+										temp += "<td>"+u[2]+"</td>";
+										temp += "<td>"+u[12]+"</td>";
+										temp += "<td>Sim</td>";
+										temp += icons+"</tr>";
+									})
+ 									
+									document.getElementById ( "data" ).innerHTML= temp;
+							}
+							
+							
+							)
+							
+							
+						}
+				
+				)
+
+	</script>
+
+
+</body>
+</html>

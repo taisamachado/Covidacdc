@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conecta Comunidade - Cadastro Líder de Rua</title>
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="css/font/materialIcons.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<!-- <script src="js/tabela.js"></script> -->
+<!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
+ -->
+
+</head>
+
+<!-- Navigation -->
+<nav
+	class="navbar navbar-expand-sm navbar-dark bg-dark static-top fixed-top">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="logo.jpg" class="img-fluid rounded-circle" width="30"
+						height="30" alt="logo" loading="lazy"></a></li>
+				<li class="nav-item active"><a class="nav-link"
+					href="InicioLogado.html">Início</a></li>
+				<li class="nav-item"><a class="nav-link" href="./index.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+
+<body>
+
+	<div class="container">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>
+							Cadastro <b>Líder de Rua</b>
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-md-6" id="dados">
+
+					<div class="card-body">
+						<form>
+							<!-- trazer as informações para os values a seguir do banco de dados -->
+							<div class="form-group">
+								<label>Nome</label> 
+								<input type="text" class="form-control"
+									id="nome" value="" placeholder="Digite o nome">
+							</div>
+
+							<div class="form-group">
+								<label>Endereço</label> <input type="text" class="form-control"
+									id="endereco" value="" placeholder="Digite o endereço">
+							</div>
+
+							<div class="form-group">
+								<label>Número</label> <input type="text" class="form-control"
+									id="numero" placeholder="Digite número">
+							</div>
+
+							<div class="form-group">
+								<label>CEP</label> <input type="text" class="form-control"
+									id="cep" placeholder="Digite o CEP">
+							</div>
+
+							<div class="form-group">
+								<label>Telefone de contato</label> <input type="text" class="form-control" 
+									id="telefone"
+									placeholder="Digite o telefone">
+							</div>
+
+							<div class="form-group">
+								<label>e-mail</label> <input type="text" class="form-control"
+									id="email" placeholder="Digite o e-mail">
+							</div>
+
+							<div class="form-group">
+								<label>Data de Nascimento</label> <input type="text" class="form-control" 
+									id="dtNascimento" value=""
+									placeholder="Digite a data de nascimento">
+							</div>
+
+							<div class="form-group">
+								<label>RG</label> <input type="text" class="form-control"
+									id="rg" placeholder="Digite o RG">
+							</div>
+
+
+							<div class="form-group">
+								<label>CPF</label> <input type="text" class="form-control"
+									id="cpf" placeholder="Digite o CPF">
+							</div>
+
+
+							<div class="form-group">
+								<label class="control-label" for="submit"></label>
+								<div>
+									<button id="submit" type="button" class="btn btn-success">Salvar</button>
+									<button type="button" class="btn btn-danger"
+										onclick=" tabelaVoluntario()">Cancelar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6">
+
+					<div class="card-body">
+						<form>
+
+							<div class="form-group">
+								<label>Nome agente comunitário de saúde</label> <input type="text" class="form-control" 
+									id="agenteComunitario"
+									placeholder="Digite o nome do agente comunitário de saúde">
+							</div>
+
+							<div class="form-group">
+								<label for="comment">Observações</label>
+								<textarea class="form-control" rows="24" id="observacoes"
+									style="resize: none;"></textarea>
+							</div>
+
+							<div class="custom-control custom-switch">
+								<input type="checkbox" class="custom-control-input"
+									id="customSwitch1" data-size="lg"> <label
+									class="custom-control-label" for="customSwitch1">Líder
+									de Rua ativo?</label>
+							</div>
+
+						</form>
+					</div>
+
+				</div>
+
+				<div class="col-md-12 col-lg-3"></div>
+
+				<div class="col-md-12 col-lg-2">
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<button type="submit" class="btn btn-outline-primary  btn-block"
+									style="visibility: hidden;">Salvar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-2">
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<button type="submit" class="btn btn-outline-primary  btn-block"
+									style="visibility: hidden;">Aprovado</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-2">
+					<div class="card-body">
+						<form>
+							<div class="form-group">
+								<button type="submit" class="btn btn-outline-primary  btn-block"
+									style="visibility: hidden;">Rejeitado</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+body {
+	padding-top: 70px;
+}
+
+navbar-expand {-sm |-md|-lg|-xl
+	
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+</style>
+
+		<script>
+			function tabelaVoluntario() {
+				location.href = "gridVoluntario.html";
+			}
+			
+			fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
+					res=>{
+						res.json().then(
+						
+						data=>{
+							console.log(data)
+								
+								data.forEach((u)=>{
+									
+									
+										
+// 									for (i = 0; i < fields.length; i++){
+										document.getElementById("nome").value=u[12]
+										document.getElementById("numero").value=u[13]
+										document.getElementById("cep").value=u[3] 
+										document.getElementById("telefone").value=u[2] 
+										document.getElementById("email").value=u[8] 
+										document.getElementById("dtNascimento").value=u[16] 
+										document.getElementById("rg").value=u[14] 
+										document.getElementById("cpf").value=u[7] 
+										
+// 									}
+									
+								})
+									
+						}
+						
+						
+						)
+						
+						
+					}
+			
+			)
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/popper.js/dist/popper.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<!-- Script Jquery mask -->
+		<script src="node_modules/jquery/dist/jquery.mask.min.js"></script>
+</body>
+</html>
