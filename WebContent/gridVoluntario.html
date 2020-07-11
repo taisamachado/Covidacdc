@@ -150,6 +150,7 @@ navbar-expand {-sm |-md|-lg|-xl
 									
 									data.forEach((u)=>{
 										temp += "<tr>";
+										temp += "<td style='display:none;'>"+u[0]+"</td>";
 										temp += "<td>"+u[12]+"</td>";
 										temp += "<td>"+u[9]+"</td>";
 										temp += "<td>"+u[13]+"</td>";
@@ -160,6 +161,7 @@ navbar-expand {-sm |-md|-lg|-xl
 									})
  									
 									document.getElementById ( "data" ).innerHTML= temp;
+									alert(document.getElementById("data").rows[0].cells.item(0).innerHTML)
 							}
 							
 							
