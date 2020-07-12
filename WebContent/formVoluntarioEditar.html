@@ -226,21 +226,25 @@ navbar-expand {-sm |-md|-lg|-xl
 						res.json().then(
 						
 						data=>{
-							console.log(data)
-								
+							console.log(localStorage["key1"]);
+							
+							nome = localStorage["nome"];
+							endereco = localStorage["endereco"];
+							numero = localStorage["numero"];	
+							
 								data.forEach((u)=>{
 									
 									
 										
 // 									for (i = 0; i < fields.length; i++){
-										document.getElementById("nome").value=u[12]
-										document.getElementById("numero").value=u[13]
-										document.getElementById("cep").value=u[3] 
-										document.getElementById("telefone").value=u[2] 
-										document.getElementById("email").value=u[8] 
-										document.getElementById("dtNascimento").value=u[16] 
-										document.getElementById("rg").value=u[14] 
-										document.getElementById("cpf").value=u[7] 
+										document.getElementById("nome").value= nome;
+										document.getElementById("endereco").value=endereco
+										document.getElementById("numero").value=numero
+// 										document.getElementById("telefone").value=u[2] 
+// 										document.getElementById("email").value=u[8] 
+// 										document.getElementById("dtNascimento").value=u[16] 
+// 										document.getElementById("rg").value=u[14] 
+// 										document.getElementById("cpf").value=u[7] 
 										
 // 									}
 									

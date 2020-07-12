@@ -74,7 +74,7 @@
 					
 				</div>
 			</div>
-			<table class="table table-bordered">
+			<table id="tableMain" class="table table-bordered">
 				<thead>
 					<tr >
 						<th >Nome</th>
@@ -133,18 +133,33 @@ navbar-expand {-sm |-md|-lg|-xl
 			location.href = "formVoluntarioNovo.html";
 		}
 		
+// 		function myFunction() {
+			
+			//add event listener to table rows
+//             let thetable = document.getElementById('tableMain').getElementsByTagName('tbody')[0]; 
+//             for (let i = 0; i < thetable.rows.length; i++)
+//                 {
+//                     thetable.rows[i].onclick = function()
+//                     {
+//                     	localStorage["key1"] = document.getElementById("data").rows[i].cells.item(0).innerHTML;
+// //                     	console.log(document.getElementById("data").rows[i].cells.item(0).innerHTML)
+//                     };
+//                 }        
+
+// 			}
+		
 		var icons = '<td><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
-		'<a class="edit" title="Edit" href="formVoluntarioEditar.html" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>'+
+		'<a class="edit" title="Edit" href="formVoluntarioEditar.html" data-toggle="tooltip"><i id="demo" onclick="myFunction()" class="material-icons">&#xE254;</i></a>'+
 		'<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
 		
-			
+// 		 href="formVoluntarioEditar.html"
 // 				document.getElementById ( "nome" ).innerText="ok1"
 				fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
 						res=>{
 							res.json().then(
 							
 							data=>{
-								console.log(data)
+								console.log()
 									
 									var temp = "";
 									
@@ -158,10 +173,26 @@ navbar-expand {-sm |-md|-lg|-xl
 										temp += "<td>"+u[12]+"</td>";
 										temp += "<td>Sim</td>";
 										temp += icons+"</tr>";
+// 										localStorage["key1"] = u[];
 									})
  									
 									document.getElementById ( "data" ).innerHTML= temp;
-									alert(document.getElementById("data").rows[0].cells.item(0).innerHTML)
+									
+									let thetable = document.getElementById('tableMain').getElementsByTagName('tbody')[0]; 
+						            for (let i = 0; i < thetable.rows.length; i++)
+						                {
+						                    thetable.rows[i].onclick = function()
+						                    {
+						                    	localStorage["nome"] = document.getElementById("data").rows[i].cells.item(1).innerHTML;
+						                    	localStorage["endereco"] = document.getElementById("data").rows[i].cells.item(2).innerHTML;
+						                    	localStorage["numero"] = document.getElementById("data").rows[i].cells.item(3).innerHTML;
+//						                     	console.log(document.getElementById("data").rows[i].cells.item(0).innerHTML)
+						                    };
+						                }  
+									
+// 									localStorage["key1"] = document.getElementById("data").rows[0].cells.item(0).innerHTML;
+									
+// 									alert(document.getElementById("data").rows[0].cells.item(0).innerHTML)
 							}
 							
 							
