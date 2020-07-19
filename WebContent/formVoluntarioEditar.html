@@ -105,7 +105,7 @@
 
 							<div class="form-group">
 								<label>Data de Nascimento</label> <input type="text" class="form-control" 
-									id="dtNascimento" value=""
+									id="dtnascimento" value=""
 									placeholder="Digite a data de nascimento">
 							</div>
 
@@ -152,8 +152,8 @@
 
 							<div class="custom-control custom-switch">
 								<input type="checkbox" class="custom-control-input"
-									id="customSwitch1" data-size="lg"> <label
-									class="custom-control-label" for="customSwitch1">Líder
+									id="ativo" data-size="lg"> <label
+									class="custom-control-label" for="ativo">Líder
 									de Rua ativo?</label>
 							</div>
 
@@ -221,25 +221,41 @@ navbar-expand {-sm |-md|-lg|-xl
 				location.href = "gridVoluntario.html";
 			}
 			
-			fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
+			fetch("https://mu5n9wq45h.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
 					res=>{
 						res.json().then(
 						
 						data=>{
-							console.log(localStorage["key1"]);
+							console.log(localStorage["nome"]);
 							
 							nome = localStorage["nome"];
 							endereco = localStorage["endereco"];
 							numero = localStorage["numero"];	
+							cep = localStorage["cep"];	
+							telefone = localStorage["telefone"];
+							
+							email = localStorage["email"];
+							dtnascimento = localStorage["dtnascimento"];	
+							rg = localStorage["rg"];	
+							cpf = localStorage["cpf"];	
+							agenteComunitario = localStorage["agenteComunitario"];
+							observacoes = localStorage["observacoes"];
+							ativo = localStorage["status"];
 							
 								data.forEach((u)=>{
-									
-									
-										
-// 									for (i = 0; i < fields.length; i++){
 										document.getElementById("nome").value= nome;
-										document.getElementById("endereco").value=endereco
-										document.getElementById("numero").value=numero
+										document.getElementById("endereco").value=endereco;
+										document.getElementById("numero").value=numero;
+										document.getElementById("cep").value=cep;
+										document.getElementById("telefone").value=telefone;
+										
+										document.getElementById("email").value=email;
+										document.getElementById("dtnascimento").value=dtnascimento;
+										document.getElementById("rg").value=rg;
+										document.getElementById("cpf").value=cpf; 
+										document.getElementById("agenteComunitario").value=agenteComunitario;
+										document.getElementById("observacoes").value=observacoes;
+										document.getElementById("ativo").value=ativo;
 // 										document.getElementById("telefone").value=u[2] 
 // 										document.getElementById("email").value=u[8] 
 // 										document.getElementById("dtNascimento").value=u[16] 
@@ -247,6 +263,13 @@ navbar-expand {-sm |-md|-lg|-xl
 // 										document.getElementById("cpf").value=u[7] 
 										
 // 									}
+									
+									if(document.getElementById("ativo").value=="Ativo" || document.getElementById("ativo").value=="A"){
+										document.getElementById("ativo").checked = true;
+									}
+									
+
+
 									
 								})
 									

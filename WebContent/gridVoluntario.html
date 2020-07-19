@@ -148,13 +148,13 @@ navbar-expand {-sm |-md|-lg|-xl
 
 // 			}
 		
-		var icons = '<td><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
+		var icons = '<td id="actions"><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
 		'<a class="edit" title="Edit" href="formVoluntarioEditar.html" data-toggle="tooltip"><i id="demo" onclick="myFunction()" class="material-icons">&#xE254;</i></a>'+
 		'<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
 		
 // 		 href="formVoluntarioEditar.html"
 // 				document.getElementById ( "nome" ).innerText="ok1"
-				fetch("https://pw2y4nyzq8.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
+				fetch("https://mu5n9wq45h.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua").then(
 						res=>{
 							res.json().then(
 							
@@ -164,15 +164,22 @@ navbar-expand {-sm |-md|-lg|-xl
 									var temp = "";
 									
 									data.forEach((u)=>{
+										console.log(u[13]);
 										temp += "<tr>";
-										temp += "<td style='display:none;'>"+u[0]+"</td>";
-										temp += "<td>"+u[12]+"</td>";
-										temp += "<td>"+u[9]+"</td>";
-										temp += "<td>"+u[13]+"</td>";
-										temp += "<td>"+u[2]+"</td>";
-										temp += "<td>"+u[12]+"</td>";
-										temp += "<td>Sim</td>";
-										temp += icons+"</tr>";
+										temp += "<td id='nome'>"+u[1]+"</td>";//line 0
+										temp += "<td id='endereco'>"+u[2]+"</td>";//line 1
+										temp += "<td id='numero'>"+u[3]+"</td>";//line 2
+										temp += "<td id='telefone'>"+u[5]+"</td>";//line 3
+										temp += "<td id='agenteComunitario'>"+u[10]+"</td>";//line 4
+										temp += "<td id='status'>"+u[12]+"</td>";//line 5
+										temp += icons+"</td>";//line 6
+										temp += "<td id='id' style='display:none;'>"+u[0]+"</td>";//line 7
+										temp += "<td id='cep'style='display:none;'>"+u[4]+"</td>";//line 8
+										temp += "<td id='email' style='display:none;'>"+u[6]+"</td>";//line 9
+										temp += "<td id='dtnascimento'style='display:none;'>"+u[7]+"</td>";//line 10
+										temp += "<td id='rg'style='display:none;'>"+u[8]+"</td>";//line 11
+										temp += "<td id='cpf'style='display:none;'>"+u[9]+"</td>";//line 12
+										temp += "<td id='observacoes'style='display:none;'>"+u[11]+"</td></tr>";//line 13
 // 										localStorage["key1"] = u[];
 									})
  									
@@ -183,12 +190,26 @@ navbar-expand {-sm |-md|-lg|-xl
 						                {
 						                    thetable.rows[i].onclick = function()
 						                    {
-						                    	localStorage["nome"] = document.getElementById("data").rows[i].cells.item(1).innerHTML;
-						                    	localStorage["endereco"] = document.getElementById("data").rows[i].cells.item(2).innerHTML;
-						                    	localStorage["numero"] = document.getElementById("data").rows[i].cells.item(3).innerHTML;
-//						                     	console.log(document.getElementById("data").rows[i].cells.item(0).innerHTML)
+						                    	localStorage["nome"] = document.getElementById("data").rows[i].cells.item(0).innerHTML;
+						                    	localStorage["endereco"] = document.getElementById("data").rows[i].cells.item(1).innerHTML;
+						                    	localStorage["numero"] = document.getElementById("data").rows[i].cells.item(2).innerHTML;
+						                    	localStorage["cep"] = document.getElementById("data").rows[i].cells.item(8).innerHTML;
+						                    	localStorage["telefone"] = document.getElementById("data").rows[i].cells.item(3).innerHTML;
+						                    	localStorage["agenteComunitario"] = document.getElementById("data").rows[i].cells.item(4).innerHTML;
+						                    	localStorage["email"] = document.getElementById("data").rows[i].cells.item(9).innerHTML;
+						                    	localStorage["dtnascimento"] = document.getElementById("data").rows[i].cells.item(10).innerHTML;
+						                    	localStorage["rg"] = document.getElementById("data").rows[i].cells.item(11).innerHTML;
+						                    	localStorage["cpf"] = document.getElementById("data").rows[i].cells.item(12).innerHTML;
+						                    	localStorage["status"] = document.getElementById("data").rows[i].cells.item(5).innerHTML;
+						                    	localStorage["observacoes"] = document.getElementById("data").rows[i].cells.item(13).innerHTML;
+// 						                     	console.log(document.getElementById("data").rows[i].cells.item(3).innerHTML)
+
+											
 						                    };
 						                }  
+						            
+						            
+						            
 									
 // 									localStorage["key1"] = document.getElementById("data").rows[0].cells.item(0).innerHTML;
 									
