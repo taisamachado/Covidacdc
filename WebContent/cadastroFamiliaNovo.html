@@ -222,6 +222,54 @@ navbar-expand {-sm |-md|-lg|-xl
 	function tabelaFamilia() {
 		location.href = "gridPresidenteFamilia.html";
 	}
+	
+	//Fetch post request
+	
+	
+	var form = document.getElementById("form")
+	
+	form.addEventListener('submit', function(e){
+		
+		e.preventDefault()
+		
+		var nome =document.getElementById("nome").value
+		var endereco =document.getElementById("endereco").value
+		var numero =document.getElementById("numero").value
+		var cep =document.getElementById("cep").value
+		var telefone =document.getElementById("telefone").value
+		var email =document.getElementById("cep").value
+		var dtnascimento =document.getElementById("cep").value
+		var rg =document.getElementById("rg").value
+		var cpf =document.getElementById("cpf").value
+		
+		fetch("https://mu5n9wq45h.execute-api.us-east-1.amazonaws.com/beta/api/lideresDeRua",{
+				method: 'POST',
+				body:JSON.stringify({
+					nome:nome,
+					endereco:endereco,
+					numero:numero,
+					cep:cep,
+					telefone:telefone,
+					email:email,
+					dtnascimento:dtnascimento,
+					rg:rg,
+					cpf:cpf
+		
+				}),
+				headers:{
+					"Content-Type":"application/json; chaset=TUF-8"
+				}
+				
+	})
+	.then(function(response){
+		return response.json()
+	})
+	.then(function(data){
+		console.log(data)
+	})
+	
+	})
+	
 </script>
 
 		</div>

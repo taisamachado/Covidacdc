@@ -92,7 +92,7 @@
 					
 <!-- 					<tr> -->
 <!-- 						<td id = "nome"> </td> -->
-<!-- 						<td id = "endereco"> </td> -->
+<!-- 						<td id = "logradouro"> </td> -->
 <!-- 						<td id = "numero"> </td> -->
 <!-- 						<td id = "telefone"> </td> -->
 <!-- 						<td id = "agcomunitario"> </td> -->
@@ -159,24 +159,22 @@ navbar-expand {-sm |-md|-lg|-xl
 							res.json().then(
 							
 							data=>{
-								console.log()
 									
 									var temp = "";
 									
 									data.forEach((u)=>{
-										console.log(u[13]);
 										temp += "<tr>";
 										temp += "<td id='nome'>"+u[1]+"</td>";//line 0
-										temp += "<td id='endereco'>"+u[2]+"</td>";//line 1
+										temp += "<td id='logradouro'>"+u[2]+"</td>";//line 1
 										temp += "<td id='numero'>"+u[3]+"</td>";//line 2
 										temp += "<td id='telefone'>"+u[5]+"</td>";//line 3
-										temp += "<td id='agenteComunitario'>"+u[10]+"</td>";//line 4
+										temp += "<td id='agente_comunitario_de_saude'>"+u[10]+"</td>";//line 4
 										temp += "<td id='status'>"+u[12]+"</td>";//line 5
 										temp += icons+"</td>";//line 6
 										temp += "<td id='id' style='display:none;'>"+u[0]+"</td>";//line 7
-										temp += "<td id='cep'style='display:none;'>"+u[4]+"</td>";//line 8
+										temp += "<td id='cep' style='display:none;'>"+u[4]+"</td>";//line 8
 										temp += "<td id='email' style='display:none;'>"+u[6]+"</td>";//line 9
-										temp += "<td id='dtnascimento'style='display:none;'>"+u[7]+"</td>";//line 10
+										temp += "<td id='data_nascimento'style='display:none;'>"+u[7]+"</td>";//line 10
 										temp += "<td id='rg'style='display:none;'>"+u[8]+"</td>";//line 11
 										temp += "<td id='cpf'style='display:none;'>"+u[9]+"</td>";//line 12
 										temp += "<td id='observacoes'style='display:none;'>"+u[11]+"</td></tr>";//line 13
@@ -184,20 +182,22 @@ navbar-expand {-sm |-md|-lg|-xl
 									})
  									
 									document.getElementById ( "data" ).innerHTML= temp;
+									console.log(document.getElementById("data").rows[0].cells.item(7).innerHTML)
 									
 									let thetable = document.getElementById('tableMain').getElementsByTagName('tbody')[0]; 
 						            for (let i = 0; i < thetable.rows.length; i++)
 						                {
 						                    thetable.rows[i].onclick = function()
 						                    {
+						                    	localStorage["id"] = document.getElementById("data").rows[i].cells.item(7).innerHTML;
 						                    	localStorage["nome"] = document.getElementById("data").rows[i].cells.item(0).innerHTML;
-						                    	localStorage["endereco"] = document.getElementById("data").rows[i].cells.item(1).innerHTML;
+						                    	localStorage["logradouro"] = document.getElementById("data").rows[i].cells.item(1).innerHTML;
 						                    	localStorage["numero"] = document.getElementById("data").rows[i].cells.item(2).innerHTML;
 						                    	localStorage["cep"] = document.getElementById("data").rows[i].cells.item(8).innerHTML;
 						                    	localStorage["telefone"] = document.getElementById("data").rows[i].cells.item(3).innerHTML;
-						                    	localStorage["agenteComunitario"] = document.getElementById("data").rows[i].cells.item(4).innerHTML;
+						                    	localStorage["agente_comunitario_de_saude"] = document.getElementById("data").rows[i].cells.item(4).innerHTML;
 						                    	localStorage["email"] = document.getElementById("data").rows[i].cells.item(9).innerHTML;
-						                    	localStorage["dtnascimento"] = document.getElementById("data").rows[i].cells.item(10).innerHTML;
+						                    	localStorage["data_nascimento"] = document.getElementById("data").rows[i].cells.item(10).innerHTML;
 						                    	localStorage["rg"] = document.getElementById("data").rows[i].cells.item(11).innerHTML;
 						                    	localStorage["cpf"] = document.getElementById("data").rows[i].cells.item(12).innerHTML;
 						                    	localStorage["status"] = document.getElementById("data").rows[i].cells.item(5).innerHTML;

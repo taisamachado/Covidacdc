@@ -64,11 +64,7 @@
 
 						<div class="form-group">
 							<label for="liderDeRua">Líder de Rua</label> 
-							<select class="form-control" name="liderDeRua" id="liderDeRua">
-								<option value="0" selected>- Selecione o Líder de Rua -</option>
-								<option value="1"></option>
-								
-							</select>
+							<input class="form-control" name="liderDeRua" id="liderDeRua">
 						</div>
 
 						<div class="form-group">
@@ -101,7 +97,7 @@
 						<div class="form-group">
 							<label>Nome do representante da família</label> 
 							<input type="text" class="form-control" 
-								id="nomeRepresentante" value=""
+								id="repFamilia" value=""
 								placeholder="Digite o nome do representante">
 						</div>
 
@@ -221,6 +217,54 @@ navbar-expand {-sm |-md|-lg|-xl
 				function tabelaFamilia() {
 					location.href = "gridPresidenteFamilia.html";
 				}
+				
+				fetch("https://2eybk84d80.execute-api.us-east-1.amazonaws.com/dev/api/familias").then(
+						res=>{
+							res.json().then(
+							
+							data=>{
+								console.log(localStorage["nome"]);
+								
+								liderDeRua = localStorage["liderDeRua"];
+								rua = localStorage["rua"];
+								numero = localStorage["numero"];	
+								repFamilia = localStorage["repFamilia"];	
+								telefone = localStorage["telefone"];
+								
+								email = localStorage["email"];
+								dtnascimento = localStorage["dtnascimento"];	
+								rg = localStorage["rg"];	
+								cpf = localStorage["cpf"];	
+								agenteComunitario = localStorage["agenteComunitario"];
+								observacoes = localStorage["observacoes"];
+								ativo = localStorage["status"];
+								
+									data.forEach((u)=>{
+											document.getElementById("liderDeRua").value= liderDeRua;
+											document.getElementById("rua").value=rua;
+											document.getElementById("numero").value=numero;
+											document.getElementById("repFamilia").value=repFamilia;
+											document.getElementById("telefone").value=telefone;
+											
+											document.getElementById("email").value=email;
+											document.getElementById("dtnascimento").value=dtnascimento;
+											document.getElementById("rg").value=rg;
+											document.getElementById("cpf").value=cpf; 
+											document.getElementById("agenteComunitario").value=agenteComunitario;
+											document.getElementById("observacoes").value=observacoes;
+											document.getElementById("ativo").value=ativo;
+										
+										if(document.getElementById("ativo").value=="Ativo" || document.getElementById("ativo").value=="A"){
+											document.getElementById("ativo").checked = true;
+										}
+									});
+										
+							}
+							
+							
+							)}
+				
+				)
 
 			</script>
 

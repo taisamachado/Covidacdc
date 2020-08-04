@@ -87,7 +87,7 @@ content="width=device-width, initial-scale=1, shrink-to-fit=no">
 				</div>
 			</div>
 
-			<table class="table table-bordered">
+			<table id="tableMain" class="table table-bordered">
 				<thead>
 					<tr>
 						<th>Líder de Rua</th>
@@ -101,7 +101,7 @@ content="width=device-width, initial-scale=1, shrink-to-fit=no">
 						<th>Actions</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="data">
 					
 					<tr>
 						<td> </td>
@@ -146,6 +146,82 @@ content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		{
      	location.href = "cadastroFamiliaNovo.html";
 		}
+		
+		var icons = '<td id="actions"><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
+		'<a class="edit" title="Edit" href="cadastroFamiliaEditar.html" data-toggle="tooltip"><i id="demo" onclick="myFunction()" class="material-icons">&#xE254;</i></a>'+
+		'<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
+		
+// 		 href="formVoluntarioEditar.html"
+// 				document.getElementById ( "nome" ).innerText="ok1"
+				fetch("https://2eybk84d80.execute-api.us-east-1.amazonaws.com/dev/api/familias").then(
+						res=>{
+							res.json().then(
+							
+							data=>{
+								console.log(data)
+									
+									var temp = "";
+									
+									data.forEach((u)=>{
+										console.log(u[13]);
+										temp += "<tr>";
+										temp += "<td id='liderDeRua'>"+u[1]+"</td>";//line 0
+										temp += "<td id='rua'>"+u[4]+"</td>";//line 1
+										temp += "<td id='numero'>"+u[5]+"</td>";//line 2
+										temp += "<td id='repFamilia'>"+u[3]+"</td>";//line 3
+										temp += "<td id='telefone'>"+u[8]+"</td>";//line 4
+										temp += "<td id='totalHabitantes'>"+u[15]+"</td>";//line 5
+										temp += icons+"</td>";//line 6
+										temp += "<td id='id' style='display:none;'>"+u[0]+"</td>";//line 7
+										temp += "<td id='cep'style='display:none;'>"+u[4]+"</td>";//line 8
+										temp += "<td id='email' style='display:none;'>"+u[6]+"</td>";//line 9
+										temp += "<td id='dtnascimento'style='display:none;'>"+u[7]+"</td>";//line 10
+										temp += "<td id='rg'style='display:none;'>"+u[8]+"</td>";//line 11
+										temp += "<td id='cpf'style='display:none;'>"+u[9]+"</td>";//line 12
+										temp += "<td id='observacoes'style='display:none;'>"+u[11]+"</td></tr>";//line 13
+// 										localStorage["key1"] = u[];
+									})
+ 									
+									document.getElementById ( "data" ).innerHTML= temp;
+									
+									let thetable = document.getElementById('tableMain').getElementsByTagName('tbody')[0]; 
+						            for (let i = 0; i < thetable.rows.length; i++)
+						                {
+						                    thetable.rows[i].onclick = function()
+						                    {
+						                    	localStorage["liderDeRua"] = document.getElementById("data").rows[i].cells.item(0).innerHTML;
+						                    	localStorage["rua"] = document.getElementById("data").rows[i].cells.item(1).innerHTML;
+						                    	localStorage["numero"] = document.getElementById("data").rows[i].cells.item(2).innerHTML;
+						                    	localStorage["repFamilia"] = document.getElementById("data").rows[i].cells.item(8).innerHTML;
+						                    	localStorage["telefone"] = document.getElementById("data").rows[i].cells.item(3).innerHTML;
+						                    	localStorage["totalHabitantes"] = document.getElementById("data").rows[i].cells.item(4).innerHTML;
+						                    	localStorage["email"] = document.getElementById("data").rows[i].cells.item(9).innerHTML;
+						                    	localStorage["dtnascimento"] = document.getElementById("data").rows[i].cells.item(10).innerHTML;
+						                    	localStorage["rg"] = document.getElementById("data").rows[i].cells.item(11).innerHTML;
+						                    	localStorage["cpf"] = document.getElementById("data").rows[i].cells.item(12).innerHTML;
+						                    	localStorage["status"] = document.getElementById("data").rows[i].cells.item(5).innerHTML;
+						                    	localStorage["observacoes"] = document.getElementById("data").rows[i].cells.item(13).innerHTML;
+// 						                     	console.log("Aqui "+ document.getElementById("data").rows[i].cells.item(0).innerHTML)
+
+											
+						                    };
+						                }  
+						            
+						            
+									
+// 									localStorage["key1"] = document.getElementById("data").rows[0].cells.item(0).innerHTML;
+									
+// 									alert(document.getElementById("data").rows[0].cells.item(0).innerHTML)
+							}
+							
+							
+							)
+							
+							
+						}
+				
+				)
+		
 </script>
 
 </body>
