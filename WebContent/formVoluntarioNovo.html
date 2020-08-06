@@ -19,6 +19,7 @@
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/popper.js/dist/popper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
 <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -67,7 +68,7 @@
 				<div class="col-sm-12 col-md-6" id="dados">
 
 					<div class="card-body">
-						<form>
+						<form id="form">
 							<div class="form-group">
 								<label>Nome</label> 
 								<input type="text" class="form-control"
@@ -121,7 +122,7 @@
 							<div class="form-group">
 								<label class="control-label" for="submit"></label>
 								<div>
-									<button id="submit" type="button" class="btn btn-success">Salvar</button>
+									<button id="salvar" type="submit" class="btn btn-success">Salvar</button>
 									<button type="button" class="btn btn-danger"
 										onclick=" tabelaVoluntario()">Cancelar</button>
 								</div>
@@ -149,8 +150,8 @@
 
 							<div class="custom-control custom-switch">
 								<input type="checkbox" class="custom-control-input"
-									id="customSwitch1" data-size="lg"> <label
-									class="custom-control-label" for="customSwitch1">Líder
+									id="status" data-size="lg"> <label
+									class="custom-control-label" for="status">Líder
 									de Rua ativo?</label>
 							</div>
 
@@ -180,10 +181,98 @@ navbar-expand {-sm |-md|-lg|-xl
 	margin-left: auto;
 }
 </style>
-		<script>
+		<script type="text/javascript">
 			function tabelaVoluntario() {
 				location.href = "gridVoluntario.html";
 			}
+			
+//POST REQUEST
+			
+			form.addEventListener('submit', function(e){
+				
+				e.preventDefault()
+				
+				if(document.getElementById("status").checked == true){
+					document.getElementById("status").value = "Active";
+				}else if(document.getElementById("status").checked == false){
+					document.getElementById("status").value = "Inactive";
+				}
+				
+				var id = Math.floor(100* Math.random() + 1);			
+				var nome =document.getElementById("nome").value
+				var endereco =document.getElementById("endereco").value
+				var numero =document.getElementById("numero").value
+				var cep =document.getElementById("cep").value
+				var telefone =document.getElementById("telefone").value
+				var email =document.getElementById("email").value
+				var data_nascimento =document.getElementById("dtNascimento").value
+				var rg =document.getElementById("rg").value
+				var cpf =document.getElementById("cpf").value
+				var agenteComunitario =document.getElementById("agenteComunitario").value
+				var observacoes =document.getElementById("observacoes").value
+				var status =document.getElementById("status").value
+				
+				
+				
+			        var xhr = new XMLHttpRequest();
+					console.log(xhr);
+			        xhr.open('POST', 'https://tjm2c0ltx3.execute-api.us-east-1.amazonaws.com/beta/api/liderDeRua');
+			        xhr.onreadystatechange = function(event) {
+			        	if(xhr.readyState == 1) {
+			                console.log('Request started.');
+			            }
+			            
+			            if(xhr.readyState == 2) {
+			                console.log('Headers received.');
+			            }
+			            
+			            if (xhr.readyState == 3) {
+			                console.log('Data loading..!');
+			            }
+			            if (xhr.readyState == 4) {
+			                console.log('Request ended.');
+			            }
+			        	console.log(event.target);
+			        	console.log(data);
+// 			        var response = event.target.response;
+// 			        console.log(response);
+// 			        if(response.includes("999")){
+// 			        	alert("toobad");
+// 			        	document.getElementById("form").reset();
+// 			        	return;
+// 			        }else if(response.includes("Sucesso na alteração dos detalhes")){
+
+
+// 			        }
+			        }
+			        const data = {
+			        	id : id,
+			        	nome: nome,
+			            logradouro: endereco,
+			            numero: numero,
+			            cep: cep,
+			            telefone: telefone,
+			            email: email,
+			            data_nascimento: data_nascimento,
+			            rg: rg,
+			            cpf: cpf,
+			            agente_comunitario_de_saude: agenteComunitario,
+			            observacoes: observacoes,
+			            status: status
+			            
+			            
+			        }
+			        xhr.send(JSON.stringify(data));
+			        console.log(xhr);
+			        
+			        return true;
+			        
+			        
+				
+			});
+			
+			
+			
 		</script>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

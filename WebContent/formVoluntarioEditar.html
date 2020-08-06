@@ -126,7 +126,8 @@
 							<div class="form-group">
 								<label class="control-label" for="submit"></label>
 								<div>
-									<button type="submit" class="btn btn-success">Salvar</button>
+									<button id="salvar" type="submit" class="btn btn-success"
+									>Salvar</button>
 									<button type="button" class="btn btn-danger"
 										onclick=" tabelaVoluntario()">Cancelar</button>
 								</div>
@@ -205,7 +206,7 @@ body {
 	padding-top: 70px;
 }
 
-navbar-expand {-sm |-md|-lg|-xl
+navbar-expand {-sm | -md|-lg|-xl
 	
 }
 
@@ -274,145 +275,81 @@ navbar-expand {-sm |-md|-lg|-xl
 			
 			
 			
-			//Fetch post request
+			//PUT REQUEST
 			
 			
-// 			const form = document.getElementById("form")
-			
-// 			form.addEventListener('submit', function(e){
-				
-// 				e.preventDefault()
-				
-// 				var id = localStorage["id"];			
-// 				var nome =document.getElementById("nome").value
-// 				var logradouro =document.getElementById("logradouro").value
-// 				var numero =document.getElementById("numero").value
-// 				var cep =document.getElementById("cep").value
-// 				var telefone =document.getElementById("telefone").value
-// 				var email =document.getElementById("cep").value
-// 				var data_nascimento =document.getElementById("cep").value
-// 				var rg =document.getElementById("rg").value
-// 				var cpf =document.getElementById("cpf").value
-// 				var agente_comunitario_de_saude =document.getElementById("agente_comunitario_de_saude").value
-// 				var observacoes =document.getElementById("observacoes").value
-// 				var status =localStorage["status"];
+			form.addEventListener('submit', function(e){
 				
 				
-
-			    
-// 			        $(document).ready(function() {
-// 			            $('#submit').click(  function () {
-// 			                console.log("click");
-// 			                var sendData = $("id":id,
-// 		 							"nome":nome,
-// 		 							"logradouro":logradouro,
-// 		 							"numero":numero,
-// 		 							"cep":cep,
-// 		 							"telefone":telefone,
-// 		 							"email":email,
-// 		 							"data_nascimento":data_nascimento,
-// 		 							"rg":rg,
-// 		 							"cpf":cpf,
-// 		 							"agente_comunitario_de_saude":agente_comunitario_de_saude,
-// 		 							"observacoes":observacoes).val();
-
-// 			                $.ajax({
-// 			                    url: 'https://2ptxvoto85.execute-api.us-east-1.amazonaws.com/producao/api/liderDeRua',    //Your api url
-// 			                    type: 'POST',   //type is any HTTP method
-// 			                    data: {
-// 			                        data: sendData
-// 			                    },      //Data as js object
-// 			                    success: function () {
-// 			                    }
-// 			                })
-// 			                ;
-
-// 			            });
-// 			        });
 				
-				
-// 				 const todo = {
+					if(document.getElementById("status").checked == true){
+						document.getElementById("status").value = "Active";
+					}else if(document.getElementById("status").checked == false){
+						document.getElementById("status").value = "Inactive";
+					}
 					
-// 					   "id":"9",
-// 					    "lider_de_rua_id":"1",
-// 					    "nome_do_representante_de_familia":"John",
-// 					    "logradouro":"testing",
-// 					    "numero":"123",
-// 					    "complemento":"testing",
-// 					    "ponto_de_referencia":"testing",
-// 					    "telefone":"123456789",
-// 					    "data_nascimento":"123",
-// 					    "rg":"123356789",
-// 					    "cpf":"123356789",
-// 					    "numero_criancas":"0",
-// 					    "numero_adultos":"1",
-// 					    "numero_idosos":"0",
-// 					    "numero_habitantes_total":"1",
-// 					    "observacoes":"testing" 
-// // 						"id": 11,
-// // 						  "nome": "Altera Lider teste Novo Ana",
-// // 						  "logradouro": "rua alterada teste novo",
-// // 						  "numero": 0,
-// // 						  "cep": "7905233",
-// // 						  "telefone": "8877665656",
-// // 						  "email": "teste@teste.com",
-// // 						  "data_nascimento": "13/11/1875",
-// // 						  "rg": "6555",
-// // 						  "cpf": "5433223445",
-// // 						  "agente_comunitario_de_saude": "jose das couves",
-// // 						  "observacoes": "teste",
-// // 						  "status": "A"
-// 					}; 
+					var id = localStorage["id"];			
+					var nome =document.getElementById("nome").value
+					var logradouro =document.getElementById("logradouro").value
+					var numero =document.getElementById("numero").value
+					var cep =document.getElementById("cep").value
+					var telefone =document.getElementById("telefone").value
+					var email =document.getElementById("email").value
+					var data_nascimento =document.getElementById("data_nascimento").value
+					var rg =document.getElementById("rg").value
+					var cpf =document.getElementById("cpf").value
+					var agente_comunitario_de_saude =document.getElementById("agente_comunitario_de_saude").value
+					var observacoes =document.getElementById("observacoes").value
+					var status =document.getElementById("status").value
+					
+					
+					
+				        var xhr = new XMLHttpRequest();
+				        xhr.open("PUT", "https://tjm2c0ltx3.execute-api.us-east-1.amazonaws.com/beta/api/liderDeRua");
+				        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+				        xhr.onreadystatechange = function(event) {
+				        	
+				        	if(xhr.readyState == 1) {
+				                console.log('Request started.');
+				            }
+				            
+				            if(xhr.readyState == 2) {
+				                console.log('Headers received.');
+				            }
+				            
+				            if (xhr.readyState == 3) {
+				                console.log('Data loading..!');
+				            }
+				            if (xhr.readyState == 4) {
+				                console.log('Request ended.');
+				            }				       
+				        	console.log(event.target);	
+				        	console.log(data);		
+				        	
+				        }
+				        const data = {
+				        	id : id,
+				        	nome: nome,
+				            logradouro: logradouro,
+				            numero: numero,
+				            cep: cep,
+				            telefone: telefone,
+				            email: email,
+				            data_nascimento: data_nascimento,
+				            rg: rg,
+				            cpf: cpf,
+				            agente_comunitario_de_saude: agente_comunitario_de_saude,
+				            observacoes: observacoes,
+				            status: status
+				            
+				            
+				        }
+				        xhr.send(JSON.stringify(data));
+				        console.log(xhr);
+				        return true;
+				        
 				
-// 				 fetch("https://8qs23g7t0m.execute-api.us-east-1.amazonaws.com/prod/api/familia", {
-// 			        method: 'POST',
-// 			        body: JSON.stringify(todo),
-// 			        headers: {
-// 			        	"Access-Control-Allow-Origin":"*","X-Amzn-Trace-Id":"Root=1-5f282dcb-9a0b98c3d96a6d05c7ef4359;Sampled=0","Content-Type":"application/json"
-// 			        }
-// 			    })
-// 			    .then(response => response.json())
-// 			    .then(json => {
-// 			        console.log(json);
-// 			    }); 
-				
-// 				alert(nome);
-				
-// 				fetch("https://2ptxvoto85.execute-api.us-east-1.amazonaws.com/producao/api/liderDeRua",{
-// 						method: 'put',
-// 						body:JSON.stringify({
-// 							"id":id,
-// 							"nome":nome,
-// 							"logradouro":logradouro,
-// 							"numero":numero,
-// 							"cep":cep,
-// 							"telefone":telefone,
-// 							"email":email,
-// 							"data_nascimento":data_nascimento,
-// 							"rg":rg,
-// 							"cpf":cpf,
-// 							"agente_comunitario_de_saude":agente_comunitario_de_saude,
-// 							"observacoes":observacoes				
-							
-				
-// 						}),
-// 						headers:{
-							
-// 							"Content-Type":"application/json",
-// 							"Access-Control-Allow-Origin" : "*", // Required for CORS support to work
-// 						    "Access-Control-Allow-Credentials" : true 
-// 						}
-						
-// 			})
-// 			.then(function(response){
-// 				console.log(response)
-// 				return response.json()
-// 			})
-// 			.then(function(data){
-// 				console.log(data)
-// 			})
-			
-// 			})
+			});
 			
 		</script>
 		

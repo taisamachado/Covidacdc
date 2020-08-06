@@ -150,7 +150,7 @@ navbar-expand {-sm |-md|-lg|-xl
 		
 		var icons = '<td id="actions"><a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>'+
 		'<a class="edit" title="Edit" href="formVoluntarioEditar.html" data-toggle="tooltip"><i id="demo" onclick="myFunction()" class="material-icons">&#xE254;</i></a>'+
-		'<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
+		'<a class="delete" title="Delete" onclick="deletar()" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a></td>';
 		
 // 		 href="formVoluntarioEditar.html"
 // 				document.getElementById ( "nome" ).innerText="ok1"
@@ -223,6 +223,37 @@ navbar-expand {-sm |-md|-lg|-xl
 						}
 				
 				)
+
+				function deletar(){
+					var id =localStorage["id"];
+
+					var xhr = new XMLHttpRequest();
+        xhr.open('DELETE', 'https://23z181wjb7.execute-api.us-east-1.amazonaws.com/beta/api/liderDeRua');
+        xhr.onreadystatechange = function(event) {
+        	if(xhr.readyState == 1) {
+                console.log('Request started.');
+            }
+            
+            if(xhr.readyState == 2) {
+                console.log('Headers received.');
+            }
+            
+            if (xhr.readyState == 3) {
+                console.log('Data loading..!');
+            }
+            if (xhr.readyState == 4) {
+                console.log('Request ended.');
+            }
+        console.log("event target "+event);
+		console.log(event.target)
+		
+        }
+        const data = {
+            id: id
+        }
+        xhr.send(JSON.stringify(data));
+        console.log(xhr)
+			};
 
 	</script>
 
